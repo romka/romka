@@ -1,0 +1,4 @@
+000_20220526_201249.jpg;Garmisch-Partenkirchen
+000_20220526_210050.jpg;Garmisch-Partenkirchen
+dsc05853.jpg;Garmisch-Partenkirchen
+dsc05862.jpg;Garmisch-Partenkirchen
