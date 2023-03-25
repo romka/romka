@@ -1,7 +1,7 @@
 ---
 title: "Prague, March 2023"
 date: 2023-03-12 12:26:17 +0100
-draft: false
+draft: true
 tags: [Berlin, Prague, Germany, Czech Republic, Travel, 2023]
 ---
 
