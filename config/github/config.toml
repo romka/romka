@@ -1,0 +1,4 @@
+baseURL = 'https://romka.github.io/'
+
+[params]
+    remark_enabled = false

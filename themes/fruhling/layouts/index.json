@@ -1,0 +1,10 @@
+{{- define "content" -}}
+  {{- $allowedTypes := slice "blog" "gallery" -}}
+  {{- $list := where .Paginator.Pages "Type" "in" $allowedTypes -}}
+  {{- $last := sub ($list | len) 1 -}}
+[
+  {{- range $index, $content := $list -}}
+    {{- partialCached "list/json/post.json" $content .RelPermalink -}}{{- if ne $last $index -}},{{- end -}}
+  {{- end -}}
+]
+{{- end -}}

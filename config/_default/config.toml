@@ -1,0 +1,24 @@
+baseURL = 'https://romka.eu/'
+languageCode = 'en-us'
+title = 'Romka!eu'
+summaryLength = 25
+copyright = "Roman Arkharov - All rights reserved"
+theme = 'fruhling'
+defaultcontentlanguage = 'ru'
+languagecode = "ru-ru"
+enableRobotsTXT = true
+googleAnalytics = "G-CTT4LY4QD1"
+
+[markup.goldmark.renderer]
+    unsafe= true
+
+[outputs]
+    page = ["html", "json"]
+    section = ["html", "json"]
+    term = ["html", "json"]
+    home = ["html", "json"]
+
+[params]
+    remark_enabled = true
+    remark_url = "https://romka.eu/remark42"
+    remark_site_id = "romkaeu"

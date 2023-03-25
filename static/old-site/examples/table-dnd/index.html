@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Пример для статьи: Перетаскивание строк таблицы. Table drag and drop — плагин для jQuery | Ромка!eu</title>  
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery.tablednd_0_5.js"></script>
+  <script type="text/javascript" src="table-dnd-example.js"></script>
+  <link type="text/css" rel="stylesheet" href="table-dnd-example.css" />
+</head>
+<body>
+  <h2>Пример 1</h2>
+  <table cellspacing="0" cellpadding="2" id="table-1"><tbody>
+    <tr id="1" style="cursor: move;" class="even-dnd"><td>1</td><td>One</td><td>some text</td></tr>
+    <tr id="2" style="cursor: move;" class="odd-dnd"><td>2</td><td>Two</td><td>some text</td></tr>
+    <tr id="3" style="cursor: move;" class="even-dnd"><td>3</td><td>Three</td><td>some text</td></tr>
+    <tr id="4" style="cursor: move;" class="odd-dnd"><td>4</td><td>Four</td><td>some text</td></tr>
+    <tr id="5" style="cursor: move;" class="even-dnd"><td>5</td><td>Five</td><td>some text</td></tr>
+    <tr id="6" style="cursor: move;" class="odd-dnd"><td>6</td><td>Six</td><td>some text</td></tr>
+   </tbody></table>
+   
+   <h2>Пример 2</h2>
+   <table cellspacing="0" cellpadding="2" id="table-2"><tbody>
+    <tr class="even-dnd"><td class="dragHandle"> </td><td>6</td><td>Six</td><td>some text</td></tr>
+    <tr class="odd-dnd"><td class="dragHandle"> </td><td>1</td><td>One</td><td>some text</td></tr>
+    <tr class="even-dnd"><td class="dragHandle"> </td><td>2</td><td>Two</td><td>some text</td></tr>
+    <tr class="odd-dnd"><td class="dragHandle"> </td><td>3</td><td>Three</td><td>some text</td></tr>
+    <tr class="even-dnd"><td class="dragHandle"> </td><td>4</td><td>Four</td><td>some text</td></tr>
+    <tr class="odd-dnd"><td class="dragHandle"> </td><td>5</td><td>Five</td><td>some text</td></tr>
+   </tbody></table>
+   
+   <h2>Пример 3</h2>   
+   <div>
+   <div id="upd-dnd" style="position: relative; border: 1px solid #ccc; width: 300px; float: right; margin: 20px 10px 20px 20px; padding: 10px;">Тут будет ответ от сервера</div>
+    <table id="table-3"><tbody>
+      <tr id="table-3-row-1" class="even-dnd"><td>1</td><td>One</td><td>some text</td></tr>
+      <tr id="table-3-row-2" class="odd-dnd"><td>2</td><td>Two</td><td>some text</td></tr>
+      <tr id="table-3-row-3" class="even-dnd"><td>3</td><td>Three</td><td>some text</td></tr>
+      <tr id="table-3-row-4" class="odd-dnd"><td>4</td><td>Four</td><td>some text</td></tr>
+      <tr id="table-3-row-5" class="even-dnd"><td>5</td><td>Five</td><td>some text</td></tr>
+      <tr id="table-3-row-6" class="odd-dnd"><td>6</td><td>Six</td><td>some text</td></tr>
+     </tbody></table>
+   </div>
+</body>
+</html>

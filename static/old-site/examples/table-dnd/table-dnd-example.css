@@ -1,0 +1,35 @@
+.tableDemo table {
+  border: 1px solid silver;
+  margin: 20px;
+}
+
+#table-1, #table-2, #table-3 {
+  width: 200px;
+}
+
+tr.even-dnd{
+  background-color: #eee;
+}
+
+tr.odd-dnd{
+  background-color: #fff;
+}
+
+tr.myDragClass td{
+    background-color: #ddd;
+}
+
+tr.myDropClass td{
+    background-color: #ccc;
+}
+
+td.showDragHandle {
+	background-image: url(updown2.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: move;
+}
+
+td.dragHandle {
+  width: 20px;
+}

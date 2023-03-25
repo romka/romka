@@ -1,0 +1,9 @@
+.column-2 {
+  font-size: 10px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.column-2 blockquote {
+  font-style:italic;
+}

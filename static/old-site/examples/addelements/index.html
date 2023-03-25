@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Пример использования динамического добавления элементов формы</title>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="addElements.js" type="text/javascript" charset="utf-8"></script>
+	</script>
+</head>
+<body>
+  <h1>Пример использования динамического добавления элементов формы</h1>
+  <p>При нажатии кнопки "Отправить" вы будете переадресованы на скрипт, который пр помощи функции var_dump выведет все переданные ему значения.</p>
+  <p>Вы можете добавить любое количество текстовых полей, а также элементов в список.</p>
+  <p>
+    <form name="testform" action="test.php" method="POST">
+      <input type="hidden" id="default-id" value="0">
+      <input type="hidden" id="default-option-id" value="0">
+      <input type="submit" value="Отправить!">
+      <div>
+        <select name="testselect">
+          <option value="option-0">option 0</option>
+        </select>
+      </div>
+      
+    </form>
+    <a href="javascript:{}" onclick="addInput()">Добавить текстовое поле</a><br>
+    <a href="javascript:{}" onclick="addOption()">Добавить элемент в список</a>
+  </p>
+
+  <br><br>
+	Описание принципа работы примера <a href="http://romka.eu/blog/dinamicheskoe-dobavlenie-elementov-k-forme">находится здесь</a>.<br>
+	Для просмотра Java-script функций изучите исходники этой страницы.
+</body>
+</html>

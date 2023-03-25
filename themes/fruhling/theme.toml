@@ -1,0 +1,11 @@
+name = "romkaeu"
+license = "MIT"
+description = "Theme based on the Sada template"
+homepage = "https://romka.eu"
+tags = ["Blog", "Responsive", "Personal", "Minimal", "Clean", "Disqus", "Google Analytics"]
+features = []
+min_version = "0.0.1"
+
+[author]
+name = "romka"
+homepage = "http://romka.eu"

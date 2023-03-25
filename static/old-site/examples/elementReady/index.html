@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>elementReady</title>
+	<link type="text/css" rel="stylesheet" media="all" href="tags.css" />	
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.onImagesLoad.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	  function allImagesLoaded(c) {
+	    alert("image.ready");
+	  }
+	  $(document).ready(function() {  
+      $('body').onImagesLoad({
+        callback: allImagesLoaded
+     });
+    });      
+  </script> 
+</head>
+<body>
+  <h1>elementReady</h1>
+  <img src="DSC_0084.JPG" id="image">
+</body>
+</html>

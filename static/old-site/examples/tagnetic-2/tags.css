@@ -1,0 +1,105 @@
+.level6 {
+  font-size: 1.6em;
+}
+
+.level5 {
+  font-size: 1.4em;
+}
+
+.level4 {
+  font-size: 1.1em;
+}
+
+.level3 {
+  font-size: 0.9em;
+}
+
+.level2 {
+  font-size: 0.8em;
+}
+
+.level1 {
+  font-size: 0.7em;
+}
+
+.tc {
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+.tag {
+  display: inline; 
+  float: left; 
+  padding: 0;
+  border: 0;
+  position: relative;
+  margin: 0;
+}
+
+.tag_line {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  margin: 0;
+}
+
+a, .tag_line a {
+  font-family: Arial, Verdana;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover, .tag_line a:hover {
+  font-family: Arial, Verdana;
+  color: #000;
+  text-decoration: underline;
+}
+
+.clr {
+  clear: both;
+}
+
+#test {
+  display: inline;
+}
+
+#test div {
+  border: 1px solid #ccc;
+  float: left;
+}
+
+.mm {
+  position: relative;
+  background: url(images/mb.jpg);
+}
+
+.mm img {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100px
+  height: 100px;
+}
+
+.nl {
+  display: inline;
+  float: left;
+}
+
+.bl {
+  display: block;
+  float: left;
+}
+
+table.magnet, table.magnet tbody tr, table.magnet tbody td, table.magnet tbody, table.magnet tr, table.magnet td {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;  
+	border-collapse: collapse;
+}
+
+td.corner {
+  line-height: 0;
+}

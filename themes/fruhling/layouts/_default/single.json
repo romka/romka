@@ -1,0 +1,48 @@
+{{ define "content"}}
+  {{- $content := (replace .Summary "\n" " ") | htmlEscape -}}
+  {
+    "type": "blog",
+    "title": "{{ .Title | htmlEscape}}",
+    "content": "{{ $content }}",
+
+  {{- $titleGallery := .Page.Params.title_gallery -}}
+
+  {{- if $titleGallery -}}
+    {{- $covers := slice -}}
+    {{- $titleGalleryName := .Params.title_gallery -}}
+    {{- $path := printf "%s%s" "/embedded-gallery/" $titleGalleryName -}}
+    {{- $gallery := .Site.GetPage $path -}}
+    {{- range $gallery.Resources.ByType "image" -}}
+      {{- $preview := .Fit "970x728 q90" -}}
+      {{- $covers = $covers | append $preview -}}
+    {{ end }}
+    {{- $count := $covers | len -}}
+    {{ if gt $count 0 }}
+    "images": [
+      {{ range $index, $cover := $covers }}
+      "{{ $cover.Permalink }}"{{- if ne (sub $count 1) $index -}},{{- end -}}
+      {{ end }}
+    ],
+    {{- end -}}
+  {{- else -}}
+    {{- $covers := slice -}}
+    {{- $images := .Resources.ByType "image" -}}
+    {{- with $image := ($images.GetMatch "*cover*") -}}
+      {{- $covers = $covers | append . -}}
+    {{- end -}}
+    {{- $count := $covers | len -}}
+    {{ if gt $count 0 }}
+      "images": [
+      {{ range $index, $cover := $covers }}
+        "{{ $cover.Permalink }}"{{- if ne (sub $count 1) $index -}},{{- end -}}
+      {{ end }}
+    ],
+    {{ end }}
+  {{ end }}
+  "publishDate": "{{ .PublishDate }}",
+  "lastMod": "{{ .Lastmod }}",
+  "permalink": "{{ .Permalink }}",
+  "readMoreText": "{{ i18n "readMore"}}",
+        "xxx": "yyy"
+  }
+{{ end }}

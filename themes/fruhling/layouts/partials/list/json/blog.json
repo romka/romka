@@ -1,0 +1,10 @@
+{{- $content := (replace .Summary "\n" " ") | htmlEscape -}}
+{
+  "type": "blog",
+  "title": "{{ .Title | htmlEscape}}",
+  "content": "{{ $content }}",
+  "publishDate": "{{ .PublishDate }}",
+  "lastMod": "{{ .Lastmod }}",
+  "permalink": "{{ .Permalink }}",
+  "readMoreText": "{{ i18n "readMore"}}"
+}

@@ -1,0 +1,48 @@
+[ru]
+    title = 'Ромка!eu'
+    weight = 1
+[en]
+    title = 'Romka!eu'
+    weight = 2
+
+[[ru.menu.main]]
+    name = "Путешествия"
+    weight = 100
+    identifier = "blog-travel"
+    url = "/tags/путешествия/"
+[[ru.menu.main]]
+    name = "Работа"
+    weight = 200
+    identifier = "blog-work"
+    url = "/tags/работа/"
+[[ru.menu.main]]
+    name = "Фотогалереи"
+    identifier = "gallery"
+    weight = 300
+    url = "/gallery"
+[[ru.menu.main]]
+    name = "en"
+    identifier = "en"
+    weight = 1000
+    url = "/en"
+
+[[en.menu.main]]
+    name = "Travel"
+    weight = 100
+    identifier = "blog-travel"
+    url = "/en/tags/travel"
+[[en.menu.main]]
+    name = "Work"
+    weight = 200
+    identifier = "blog-work"
+    url = "/en/tags/work"
+[[en.menu.main]]
+    name = "Photogalleries"
+    weight = 300
+    identifier = "gallery"
+    url = "/en/gallery"
+[[en.menu.main]]
+    name = "ru"
+    identifier = "ru"
+    weight = 1000
+    url = "/"

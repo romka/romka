@@ -1,0 +1,7 @@
+logo = "/favicon.ico"
+
+[photomosaic]
+    numberOfUniqueMosaics = 25
+
+[lightgallery]
+    licenseKey = '01521FDA-AEE94E8E-A5EFBFD4-7EB49C81'

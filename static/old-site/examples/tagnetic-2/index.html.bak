@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Tagnetic</title>
+	<link type="text/css" rel="stylesheet" media="all" href="tags.css" />	
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.tagnetic.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.tagnetic.settings.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+    img, div { behavior: url(iepngfix.htc) }
+  </style> 
+</head>
+<body>
+  <h1>Tagnetic</h1>
+  <div id="tags_cloud">
+    <ul id="tagnetic" style="top: 0; left: 0;";>
+      <li id="tag1" class="level1"><a href="#">Drupal</a></li>
+      <li id="tag2" class="level2"><a href="#">Скринкаст</a></li>
+      <li id="tag3" class="level3"><a href="#">Видео</a></li>
+      <li id="tag4" class="level4"><a href="#">Web 2.0</a></li>
+      <li id="tag5" class="level5"><a href="#">Программирование</a></li>
+      <li id="tag6" class="level5"><a href="#">Я умный</a></li>
+      <li id="tag7" class="level1"><a href="#">Новости</a></li>
+      <li id="tag8" class="level2"><a href="#">от А до Я</a></li>
+      <li id="tag9" class="level3"><a href="#">33</a></li>
+      <li id="tag10" class="level4"><a href="#">Политология</a></li>
+      <li id="tag11" class="level5"><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li id="tag12" class="level1"><a href="#">Футбол</a></li>
+      <li id="tag13" class="level2"><a href="#">Введение в глобализацию</a></li>
+      <li id="tag14" class="level3"><a href="#">Юмор</a></li>
+      <li id="tag15" class="level4"><a href="#">Яндекс</a></li>
+      <li id="tag16" class="level5"><a href="#">Социальные сети</a></li>
+      <li id="tag17" class="level6"><a href="tagnetic.zip">Скачать "Холодильник тэгов"</a></li>
+      <li id="tag18" class="level1"><a href="#">Спорт</a></li>
+      <li id="tag19" class="level2"><a href="#">Аудио- и видеоподкастинг</a></li>
+      <li id="tag20" class="level3"><a href="#">сено</a></li>
+      <li id="tag21" class="level4"><a href="#">J++</a></li>
+      <li id="tag22" class="level5"><a href="#">Вижуал бэйсик 4.0</a></li>
+      <li id="tag23" class="level6"><a href="#">:))</a></li>
+      <li id="tag24" class="level1"><a href="#">ква</a></li>
+      <li id="tag25" class="level1"><a href="#">Анекоты</a></li>
+      <li id="tag26" class="level2"><a href="#">Деньги</a></li>
+      <li id="tag27" class="level3"><a href="#">Автомобили</a></li>
+      <li id="tag27" class="level4"><a href="#">Гандбол</a></li>
+      <li id="tag29" class="level5"><a href="#">Лето</a></li>
+      <li id="tag30" class="level5"><a href="#">Море</a></li>
+      <li id="tag31" class="level1"><a href="#">Мазда</a></li>
+      <li id="tag32" class="level2"><a href="#">Java-sccipt</a></li>
+      <li id="tag33" class="level3"><a href="#">PHP</a></li>
+      <li id="tag34" class="level4"><a href="#">Perl</a></li>
+      <li id="tag35" class="level5"><a href="#">Ruby on Rails</a></li>
+      <li id="tag36" class="level1"><a href="#">c++</a></li>
+      <li id="tag37" class="level2"><a href="#">политика</a></li>
+      <li id="tag38" class="level3"><a href="#">Полеты на Луну</a></li>
+      <li id="tag39" class="level4"><a href="#">Космическая программа</a></li>
+      <li id="tag40" class="level5"><a href="#">Фэнтези</a></li>
+      <li id="tag41" class="level6"><a href="http://romka.eu/blog/tagnetic-kholodilnik-tegov">Описание холодильника</a></li>
+      <li id="tag42" class="level1"><a href="#">Чемпионат</a></li>
+      <li id="tag43" class="level2"><a href="#">Сердце</a></li>
+      <li id="tag44" class="level3"><a href="#">Легкая атлетика</a></li>
+      <li id="tag45" class="level4"><a href="#">Бомба</a></li>
+      <li id="tag46" class="level5"><a href="#">Блины</a></li>
+      <li id="tag47" class="level5"><a href="#">Сметана</a></li>
+      <li id="tag48" class="level1"><a href="#">Молоко</a></li>
+    </ul>
+  </div>
+</body>
+</html>
