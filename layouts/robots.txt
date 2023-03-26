@@ -1,0 +1,4 @@
+User-agent: *
+{{ if .Param "robots_txt_disallow_all" }}
+Disallow: /
+{{ end }}
