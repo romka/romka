@@ -1,0 +1,4 @@
+baseURL = 'https://mirror1.romka.eu/'
+
+[params]
+    remark_enabled = false
