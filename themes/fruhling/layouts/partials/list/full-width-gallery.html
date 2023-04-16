@@ -14,7 +14,7 @@
                 {{- partial "partials/shared/tags.html" . -}}
                 {{- partial "partials/shared/date.html" . -}}
             </div>
-            <h4 class="post_title"><a href="{{ .RelPermalink | relURL }}">{{ .Title }}</a></h4>
+            <h1 class="post_title"><a href="{{ .RelPermalink | relURL }}">{{ .Title }}</a></h1>
 
             <div class="post_img {{ if .Draft }} draft{{ end }}">
                 <div class="masonry-gallery">

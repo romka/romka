@@ -42,7 +42,6 @@
   "publishDate": "{{ .PublishDate }}",
   "lastMod": "{{ .Lastmod }}",
   "permalink": "{{ .Permalink }}",
-  "readMoreText": "{{ i18n "readMore"}}",
-        "xxx": "yyy"
+  "readMoreText": "{{ i18n "readMore"}}"
   }
 {{ end }}

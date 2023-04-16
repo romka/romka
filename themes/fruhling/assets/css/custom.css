@@ -67,7 +67,7 @@ figure {
 }
 
 .note {
-    background-color: #f5f8ff !important;
+    background-color: #fffffe !important;
 }
 
 .post_internal_image, .post_internal_gallery {
@@ -144,12 +144,20 @@ article ul li {
     list-style-type: disc;
 }
 
-h2 {
+h1 {
     font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
 }
 
 h3 {
     font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
 }
 
 .float-right {
