@@ -5,3 +5,6 @@ logo = "/favicon.ico"
 
 [lightgallery]
     licenseKey = '01521FDA-AEE94E8E-A5EFBFD4-7EB49C81'
+
+[fruhling]
+    indexPageContentTypes = ["blog", "gallery", "note", "story"]

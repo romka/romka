@@ -306,3 +306,26 @@ article table td {
 article img.zoomable {
     padding-bottom: 1em;
 }
+
+.story {
+    position: relative;
+}
+
+.story-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+/*.story_title {*/
+/*    padding: 10px 30px;*/
+/*    text-shadow: 0 0 4px #d0d2ff;*/
+/*}*/
+
+.story_title {
+    background: rgba(243, 243, 243, 0.85);
+    padding: 5px 10px;
+    display: block;
+    width: fit-content;
+}
