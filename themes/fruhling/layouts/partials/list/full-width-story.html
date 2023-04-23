@@ -30,7 +30,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            {{- if .Title -}}<div class="story-title"><h1 class="story_title">{{ .Title }}</h1></div>{{- end -}}
+            {{- if .Title -}}<div class="story-title"><h1 class="story_title"><a href="{{ .RelPermalink | relURL }}">{{ .Title }}</a></h1></div>{{- end -}}
         </div>
     </article>
 </div>
