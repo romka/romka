@@ -36,12 +36,16 @@
             {{- with $originalImage.Exif -}}
                 {{- if eq 6 .Tags.Orientation -}}
                     {{- $image = $originalImage.Fit "1920x1920 q90 r270" -}}
-                    {{- $preview = $image.Fit "970x728 q100" -}}
-                    {{- $thumb = $image.Fit "96x76 q100" -}}
+                    {{- $preview = $image.Fit "970x728 q100 r270" -}}
+                    {{- $thumb = $image.Fit "96x76 q100 r270" -}}
                 {{- else if eq 8 .Tags.Orientation -}}
                     {{- $image = $originalImage.Fit "1920x1920 q90 r90" -}}
-                    {{- $preview = $image.Fit "970x728 q100" -}}
-                    {{- $thumb = $image.Fit "96x76 q100" -}}
+                    {{- $preview = $image.Fit "970x728 q100 r90" -}}
+                    {{- $thumb = $image.Fit "96x76 q100 r90" -}}
+                {{- else if eq 3 .Tags.Orientation -}}
+                    {{- $image = $originalImage.Fit "1920x1920 q90 r180" -}}
+                    {{- $preview = $image.Fit "970x728 q100 r180" -}}
+                    {{- $thumb = $image.Fit "96x76 q100 r180" -}}
                 {{- end -}}
             {{- end -}}
 

@@ -21,6 +21,8 @@
                 {{- $thumb = $photo.Fill "200x150 q100 r270" -}}
             {{- else if eq 8 .Tags.Orientation -}}
                 {{- $thumb = $photo.Fill "200x150 q100 r90" -}}
+            {{- else if eq 3 .Tags.Orientation -}}
+                {{- $thumb = $photo.Fill "200x150 q100 r180" -}}
             {{- end -}}
         {{- end -}}
 

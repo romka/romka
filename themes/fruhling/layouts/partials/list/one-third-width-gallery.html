@@ -25,6 +25,10 @@
                         {{- $image = $originalImage.Fit "1920x1920 q90 r90" -}}
                         {{- $preview = $originalImage.Fit "970x728 q90 r90" -}}
                         {{- $thumb = $originalImage.Fit "96x76 q90 r90" -}}
+                    {{- else if eq 3 .Tags.Orientation -}}
+                        {{- $image = $originalImage.Fit "1920x1920 q90 r180" -}}
+                        {{- $preview = $originalImage.Fit "970x728 q90 r180" -}}
+                        {{- $thumb = $originalImage.Fit "96x76 q90 r180" -}}
                     {{- end -}}
                 {{- end -}}
                 <figure data-src="{{- $image.RelPermalink | relURL -}}" data-thumb="{{- $thumb.RelPermalink | relURL -}}" class="swiper-slide">

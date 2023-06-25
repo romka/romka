@@ -59,13 +59,19 @@ masonryGalleries.forEach(function(gallery) {
 // enable galleries in blog post titles
 document.querySelectorAll('.title-gallery').forEach(function(inlineTitleGallery) {
     lightGallery(inlineTitleGallery, {
-        plugins: [lgFullscreen, lgThumbnail, lgHash],
+        plugins: [lgFullscreen, lgThumbnail, lgHash, lgVideo],
         speed: 500,
         mode: 'lg-fade',
         download: false,
         allowMediaOverlap: true,
         toggleThumb: true,
         hash: true,
+        videojs: true,
+        videojsOptions: {
+            autoplayFirstVideo: false,
+            autoplayVideoOnSlide: true,
+            gotoNextSlideOnVideoEnd: false,
+        },
         licenseKey: lightGalleryLicenseKey,
     });
 });
