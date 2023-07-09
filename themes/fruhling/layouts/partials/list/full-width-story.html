@@ -5,8 +5,29 @@
         <div class="post_text{{ $topRadius }} story">
             <div class="post_internal_gallery swiper">
                 <div class="swiper-wrapper title-gallery" style="text-align: center">
+
+                    {{- $story := . -}}
+
+                    {{- $lines := split $story.RawContent "\n" -}}
+                    {{- $titles := dict -}}
+                    {{- $descriptions := dict -}}
+                    {{- $videos := dict -}}
+                    {{- range $lines -}}
+                        {{- $descr := split . ";" -}}
+                        {{- if strings.Contains (index $descr 0) ":" -}}
+                            {{- $imgVideo := split (index $descr 0) ":"  -}}
+                            {{- $titles = merge $titles (dict (index $imgVideo 0) (index $descr 1)) -}}
+                            {{- $videos = merge $videos (dict (index $imgVideo 0) (index $imgVideo 1)) -}}
+                        {{- else -}}
+                            {{- $titles = merge $titles (dict (index $descr 0) (index $descr 1)) -}}
+                        {{- end -}}
+                        {{- $descriptions = merge $descriptions (dict (index $descr 0) (index $descr 2)) -}}
+                    {{- end -}}
+
                     {{ $images := .Resources.ByType "image" }}
                     {{- range $images -}}
+                        {{- $title := index $titles .Name -}}
+                        {{- $description := index $descriptions .Name -}}
                         {{- $originalImage := . -}}
                         {{- $preview := $originalImage.Fit "970x728" -}}
                         {{- $thumb := $originalImage.Fit "96x76" -}}
@@ -27,9 +48,21 @@
                             {{- end -}}
                         {{- end -}}
 
-                    <figure data-src="{{ $image.RelPermalink | relLangURL }}" data-thumb="{{ $thumb.RelPermalink | relLangURL }}" class="swiper-slide">
-                        <img src="{{ $preview.RelPermalink | relLangURL }}">
-                    </figure>
+                        {{- if isset $videos .Name -}}
+                            {{- if strings.Contains (index $videos .Name) "youtu" -}}
+                                <figure data-src="{{- index $videos .Name -}}" data-poster="{{ $image.RelPermalink | relURL }}"{{ if $description }} data-sub-html="<strong>{{ $title }}</strong>. {{ $description }}"{{ end }} class="swiper-slide">
+                                    <img src="{{ $preview.RelPermalink | relURL }}" alt="{{ $title }}">
+                                </figure>
+                            {{- else -}}
+                                <figure data-video='{"source": [{"src":"{{- $story.RelPermalink -}}{{- index $videos .Name -}}", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}' data-poster="{{ $image.RelPermalink | relURL }}"{{ if $description }} data-sub-html="<strong>{{ $title }}</strong>. {{ $description }}"{{ end }} class="swiper-slide">
+                                    <img src="{{ $preview.RelPermalink | relURL }}" alt="{{ $title }}">
+                                </figure>
+                            {{- end -}}
+                        {{- else -}}
+                            <figure data-src="{{ $image.RelPermalink | relURL }}" data-thumb="{{ $thumb.RelPermalink | relURL }}"{{ if $description }} data-sub-html="<strong>{{ $title }}</strong>. {{ $description }}"{{ end }} class="swiper-slide">
+                                <img src="{{ $preview.RelPermalink | relURL }}" alt="{{ $title }}">
+                            </figure>
+                        {{- end -}}
                     {{- end -}}
                 </div>
                 <div class="swiper-pagination"></div>
