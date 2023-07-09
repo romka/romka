@@ -22,7 +22,12 @@
         {{- $lines := split $gallery.RawContent "\n" -}}
         {{- range $lines -}}
             {{- $descr := split . ";" -}}
-            {{- $descriptions = merge $descriptions (dict (index $descr 0) (index $descr 1)) -}}
+            {{- if strings.Contains (index $descr 0) ":" -}}
+                {{- $imgVideo := split (index $descr 0) ":"  -}}
+                {{- $descriptions = merge $descriptions (dict (index $imgVideo 0) (index $descr 1)) -}}
+            {{- else -}}
+                {{- $descriptions = merge $descriptions (dict (index $descr 0) (index $descr 1)) -}}
+            {{- end -}}
         {{- end -}}
 
         {{- range $gallery.Resources.ByType "image" -}}
