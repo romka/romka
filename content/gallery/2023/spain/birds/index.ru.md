@@ -3,7 +3,7 @@ title: Испанские птицы
 date: 2023-09-19 19:03:16 +0100
 draft: false
 tags: [Испания, Барселона, Валенсия, птицы, Путешествия, 2023]
-summary_photos_count: 13
+summary_photos_count: 15
 ---
 DSC08453.jpg;Уличный музыкант в парке Гуэль
 DSC08470.jpg;
