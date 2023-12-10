@@ -7,7 +7,7 @@
         <div class="row justify-content-md-center">
             <div class="col-lg-10">
                 <div class="row blog_posts cardPostStyle">
-                    {{ range .Paginator.Pages }}
+                    {{ range (where .Paginator.Pages ".Params.unlisted" "!=" "true") }}
                     {{- partialCached "list/full-width-post.html" . .RelPermalink -}}
                     {{ end }}
                 </div>

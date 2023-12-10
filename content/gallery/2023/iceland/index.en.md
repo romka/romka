@@ -2,7 +2,7 @@
 title: Iceland 2023
 date: 2023-12-02 16:27:34 +0100
 draft: false
-tags: [Iceland, Reykjavik, Akureyri, waterfall, Selfoss, Dettifoss, Mývatn, Vatnajökull, Jökulsárlón, Diamond beach, Gullfoss, geysir Geysir, aurora borealis, northen lights]
+tags: [Iceland, Reykjavik, Akureyri, waterfall, Selfoss, Dettifoss, Mývatn, Vatnajökull, Jökulsárlón, Diamond beach, Gullfoss, geysir Geysir, aurora borealis, northen lights, travel]
 summary_photos_count: 15
 ---
 2023-11-10_DSC09422.jpg;Reykjavik
@@ -10,7 +10,6 @@ summary_photos_count: 15
 2023-11-11_DSC09443.jpg;Akureyri
 2023-11-11_DSC09463.jpg;
 2023-11-11_DSC09465.jpg;
-2023-11-11_DSC09471.jpg;
 2023-11-11_DSC09478.jpg;
 2023-11-11_DSC09504.jpg;
 2023-11-11_DSC09505.jpg;
@@ -18,7 +17,6 @@ summary_photos_count: 15
 2023-11-11_DSC09522.jpg;
 2023-11-12_DSC09535.jpg;Sunrise near lake Mývatn
 2023-11-12_DSC09544.jpg;
-2023-11-12_DSC09549.jpg;
 2023-11-12_DSC09559.jpg;
 2023-11-12_DSC09563.jpg;
 2023-11-12_DSC09565.jpg;
