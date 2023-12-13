@@ -333,3 +333,19 @@ article img.zoomable {
     display: block;
     width: fit-content;
 }
+
+.single-youtube-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-bottom: 0.85rem;
+}
+
+.single-youtube-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:0;
+}
