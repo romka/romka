@@ -38,9 +38,9 @@ summary_photos_count: 15
 2023-11-12_DSC09701.jpg;
 2023-11-12_DSC09727.jpg;
 2023-11-12_DSC09732.jpg;
-2023-11-13_DSC09749.jpg;Attempt to capture Aurora
-2023-11-13_DSC09759.jpg;
-2023-11-13_DSC09912.jpg;
+2023-11-13_DSC09749-processed.jpg;Attempt to capture Aurora
+2023-11-13_DSC09759-processed.jpg;
+2023-11-13_DSC09912-processed.jpg;
 2023-11-14_DSC00001.jpg;One more sunrise near lake Mývatn
 2023-11-14_DSC00002.jpg;
 2023-11-14_DSC00005.jpg;
