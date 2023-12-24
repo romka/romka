@@ -18,6 +18,7 @@
                         {{- if and (eq $titleGalleryLen 0) (eq $coverImageLen 0) -}}{{- $topRadius = " post_text_top_radius" -}}{{- end -}}
                         <div class="post_text{{ $topRadius }}">
                             <div class="post_meta_top">
+                                {{- partial "partials/shared/links-to-translations.html" . .Page -}}
                                 {{- partial "partials/shared/tags.html" . -}}
                                 {{- partial "partials/shared/date.html" . -}}
                             </div>

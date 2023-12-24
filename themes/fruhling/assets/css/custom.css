@@ -190,6 +190,21 @@ h4 {
     float: right;
 }
 
+.post_meta_translations {
+    float: right;
+    text-transform: uppercase;
+}
+
+.post_meta_translations a, .post_meta_translations a:focus {
+    color: #00aced !important;
+}
+
+.post_meta_translations a:hover {
+    color: #8ad9fd !important;;
+}
+
+
+
 .post_content ul {
     padding-left: 15px;
 }
