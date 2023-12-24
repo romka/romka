@@ -193,6 +193,8 @@ h4 {
 .post_meta_translations {
     float: right;
     text-transform: uppercase;
+    padding: 0 10px;
+    background-color: #cde8ff;
 }
 
 .post_meta_translations a, .post_meta_translations a:focus {
