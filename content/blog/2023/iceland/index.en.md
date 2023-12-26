@@ -1,0 +1,210 @@
+---
+title: Journey around Iceland
+date: 2023-12-09 13:00:57 +0100
+publishDate: 2023-12-17 21:22:41 +0100
+draft: true
+featured: true
+tags: [Iceland, Reykjavik, Akureyri, waterfall, Selfoss, Dettifoss, Mývatn, Vatnajökull, Jökulsárlón, Diamond beach, Gullfoss, geysir Geysir, aurora borealis, northen lights, travel, ]
+---
+The term grill tourism has been well-established in my lexicon for a long time --- this is a type of holiday where a tourist isn’t actively involved in the planning of his trip. A tour operator drives a tourist like a roasted chicken in a bus-oven from a hotel to points of interest and the tourist’s goal is either to lie on the beach and be covered in a crispy sun-tan crust, or gazing out of the window while seated on a bus. Or even there isn’t a tour operator and you are just lying for a week under the sun in a chaise longue in an all-inclusive hotel. It’s grill tourism as well. This term used to have a strictly negative meaning to me, but now it has become more neutral: sometimes you just want to switch off your brain and do nothing. There is nothing wrong with it, but it’s important to mix grill-holidays with more eventful itineraries, since grill-tourism is monotonous and tedious.
+
+{{< img "grill-bus.png" "DALL-E and a couple of other neural networks are sponsors of this picture" >}}
+
+Through recent observations (and also based on some of my own adventures) I’ve extracted one more category of holidays --- checklist-tourism. The goal of a checklist-tourist is to see as many things as possible and to set as many check marks as possible in an imaginary (or maybe in a real) checklist at all costs within a single short trip. On the one hand, you really can see a lot, but on the other hand --- you’re always in a rush, you don’t have space to manoeuvre and you can’t afford to spend more time in a place you like. It'd be better to avoid checklist-tourism: memories from such trips fade and are squashed into one evenly grey lump of plasticine and over time you can no longer separate one episode of the adventure from another.
+
+With these two vacation types in my mind I’d approached the planning of my trip to Iceland. Prior to the journey, my perception of the country was superficial and romanticised, as if it were a snow-covered island out of a fairy tale. This perception was amplified by a plethora of blog posts and photos from the internet, showing truly incomparable scenes that reinforce this image: ice caves with the walls lumining from the inside, northern lights, beaches of black sand and shards of ice sparkling in the sunlight. However, the vast majority of these exceptional views are nothing more than marketing tricks aimed at attracting tourists, rare shots taken by professionals at a brief and lucky moment.
+
+### What to do in Iceland?
+In short, itinerary planning nowadays is complicated by the fact that the real pearls have to be sifted out from the marketing noise. So here's a list of interesting things I've learned about Iceland.
+
+There are about 360 thousand people living in Iceland and almost half of them in Reykjavik. In other words, it's definitely the kind of place one should avoid at all costs, since the feeling of solitude is one of the reasons why it's worth travelling to Iceland. The overall population density across the entire island is about 3.5 individuals per square kilometre, whereas in Reykjavik, the density reaches 490 people per square kilometre. For instance, the population density in Berlin is approximately 4000, and in Moscow it is about 5000 individuals per square kilometre.
+
+There are 130 volcanoes grouped into 30 volcanic clusters here and they erupt every now and then. Local companies organise excursions to the erupting volcanoes! Observing streams of live lava is a truly unique and irreplaceable experience. It’s hard to imagine where else one could undergo such an adventure. But, apparently, aligning your itinerary for the eruption it’s either a matter of great luck, or a substantial amount of free time.
+
+_The picture below I found on the internet. This is how an excursion to the erupting volcano could look like, if it weren't for photoshopped lava._
+
+{{< img "volcano-excursion.jpg" "A picture from the internet. The lava looks photoshopped" >}}
+
+Apart from volcanoes there are geysers as well. By the way, all the geysers in the world are named on behalf of the geyser Geysir that is located nearby to Reykjavik.
+
+There are several large glaciers with absolutely extraterrestrial sceneries, ice caves, rivers and waterfalls. One of the glaciers was used as a setting for two planets in the movie Interstellar (undoubtedly the best science fiction movie ever made).
+
+Besides Interstellar there are many other movies that have been filmed in Iceland. The movie “The Secret Life of Walter Mitty” was one of the reasons why I decided to drive along the desolated Iceland’s roads. Around the island, closely following the coastline, is Route 1 --- a circular road stretching about 1300 kilometres, granting access to nearly all local landmarks throughout the year. Some of the island's roads are closed in winter, so it’s important to bear that in mind when planning a route.
+
+Golden Circle and Diamond Circle --- two popular tourist car routes. The first is close to Reykjavik and the second to the north-east of the island, close to Lake Myvatn and the waterfalls Dettifoss and Selfoss. Both routes can be completed in 1-2 days and the second one looks more attractive, since it's further away from the capital and crowds of tourists.
+
+Waterfalls! There are several of them here and these are not just typical mountain brooks gently descending from a few metres, these are powerful, expansive rivers! Europe's mightiest waterfall, Dettifoss, spans 100 metres in width, and its torrents cascade from a height of 44 metres!
+
+_Aurora borealis_ --- northern lights can be observed in Iceland. This was a reason why I decided to visit Iceland in November, the prime aurora season running from November to February.
+
+Surprisingly, diving and snorkelling are available here! Yes, the water temperature in November is below 10 degrees, so a dive requires a drysuit and an appropriate preparation. But anyway, it's still a viable option!
+
+Fauna: whales, seals, birds, deers, horse riding. Many activities here involve animals, but November is not the peak season for such entertainments.
+
+If a wallet permits (on average the typical European prices can be safely doubled in Iceland), one can rent a helicopter to fly to the summit of one of the local mountains.
+
+Another type of attraction is the natural baths --- outdoor pools where the water is drawn from underground boreholes and has a temperature of 36-40 celcius, depending on the location. It's quite an exotic contrast --- you walk out of a warm changing room to the street where the temperature is below zero, run about 10 metres, and jump into a hot pool. The Russian sauna, on the contrary :)
+
+Iceland is one of the few places with a very little artificial light. This makes driving very difficult at night, which falls around 6 p.m. in November. On the flip side, a large part of the island has a Bortle scale index from 1 to 3, allowing you to see the Milky Way with the naked eye... as long as the sky remains cloud-free.
+
+### Planned route
+Iceland is a place where a grill-tourist has nothing to do, all the activities there imply activity: a lot of driving, even more outdoor hiking under the pouring icy rains and penetrating cold winds, requiring a high level of energy.
+
+Even a month wouldn’t be enough to try everything I mentioned above without a rush. I had only 10 days, so to not turn to a grill-tourist I had to significantly cut the list. Finally, I came up with the following route:
+- Fly to Reykijavik, it’s located in the west side of the island, and the very next day with the domestic airlines fly to Akureyri, a town on the north-west of the island,
+- In Akureyri, rent a car and explore the surroundings of the Diamond Circle: the Myvatn Lake, geysers and waterfalls, and natural baths. All these things are here and they’re not as heavily crowded with the tourists as Reykjavik’s area. Every night observing northern lights,
+- Then drive to the south of the island to the Vatnajökull glacier area and spend a few days there. Live in a guest house on a farm, which is located barely 50 kilometres away from civilization! It supposed to be an unmatchable experience: live in an isolated place, hike the glaciers and black sand beaches by day, and watch the northern lights at night,
+- After 3 days there, drive back to the west, towards Reykjavik, where explore its surroundings and watch the northern lights. Then return back the car and fly back home.
+
+Of course, not everything went according to plan, and I'm going to tell the story of this adventure.
+{{< embedded-gallery "2023/iceland/first-gallery" >}}
+<!--more-->
+
+### Part 1. Reykjavik and Akureyri
+I’d flown to Reykjavik on Friday afternoon, that’s why I had to take an additional day off from work. The thing is, international and domestic airports are located in neighbouring cities and it was more convenient for me to fly to Akureyri the next day after arriving in Reykjavik. However the problem was that the rental-car company office didn’t work on Sundays! That’s why I had to get to Akureyri on Saturday. It may seem like a minor detail, but the itinerary had to be adapted.
+
+Taxi from the airport to the city would have cost 150 Euro. It's not that I'm greedy, but I chose to get to the city by bus for 30. Here I made my first mistake: I had to exchange Euros to local Krones in the airport, but I rushed to the bus and didn’t do it.
+
+Reykjavik didn’t impress me, it’s a regular greyish northish novemberish city: bars and restaurants, monuments, pedestrian streets and embankments, everything like everywhere. There is absolutely no sense at all in going to Iceland only to visit Reykjavik, and highly likely, no one does it.
+
+Domestic airport is located right inside the city, and fortunately I stayed only a couple kilometres from it. Fortunately, because my flight to Akureyri was at 8:30 a.m. and I planned to go to the airport, as usual, 2,5 hours in advance, but public transport doesn’t work so early and taxi-drivers accept only cash, which I didn’t have :( so I had to lug my suitcase on foot.
+
+Dragging so early to the airport was a mistake as well. There is a photo of the domestic airport below. Here is literally captured a half of the airport. It opens one hour before the first flight, which is 7:30 in the morning, and registration starts 45 minutes before the flight. In the international airports at this time registration usually closes. All in all, I had to endure alone for 1,5 hours in the cold. Thankfully, I had a tripod and a foldable chair, so I took the first of the few photos of myself on this journey.
+
+{{< img "2023-11-11_DSC09427.jpg" >}}
+
+On the very first day of my arrival in Iceland, something happened I couldn't even dream of: an earthquake occurred 40 kilometres away from Reykjavik and it had to trigger a volcanic eruption. I had a chance to witness it with my own eyes! According to the forecast, it could happen at any moment within the next few days or weeks. It remained to wait and hope for the best. The phrase “hope for the best” may sound egocentric in the context of a natural disaster that can destroy a whole town, but for icelanders it’s an ordinary event and an eruption would have happened regardless of me being on the island.
+
+Despite the earthquake, I reached Akureyri without any troubles, took the car, drove around the town and by the evening got to a hotel near Lake Myvatn. It was the only place in Iceland where I had to talk to a person at reception. In all the other places they had a self-check in: they either left a key right in the door of my room, or emailed me a code for an electronic lock.
+
+{{< embedded-gallery "2023/iceland/akureyri" >}}
+
+### Part 2. North of Iceland: Lake Myvatn and Diamond Circle
+I thoroughly prepared for the trip in many aspects, including those related to observing and capturing the aurora. Apart from other things, I’ve installed two applications showing Kp-index (global geomagnetic activity index) and some other parameters, which reflect the probability of the appearance of northern lights. Kp-index may have values from 0 to 9 and in Iceland with the Kp-index 4-5 probability to see the aurora is about 30%, with the index of 6-7 probability is about 50%.
+
+Northern lights appear on the altitudes from 100 to 400 kilometres, so it can be easily spoiled by clouds. That’s why I also used a local weather app, that quite precisely showed the forecast of all the weather parameters, including a cloud forecast.
+
+The day was quite packed, the weather was cloudy, and the northern lights forecast --- weak, so I didn’t wait for it and went to bed early. And in the morning one of the most picturesque sunrises I had ever seen awaited me. I’ve already mentioned that night in Iceland in November begins at about 6 p.m. and the Sun rises at about 9 a.m. It's very convenient, you don’t need to wake up at 5 in the morning to take beautiful pictures.
+
+While photographing the sunrise I explored the area around the hotel, which is literally located in the middle of borderless nowhere, and found a good place to view the aurora at night.
+
+{{< embedded-gallery "2023/iceland/sunset" >}}
+
+After breakfast, enjoying the sunrise and checking the news for "did the eruption go bang" I drove to the first of the planned sights of my trip --- waterfalls Dettifoss and Selfoss.
+
+Roads on the north of Iceland are white and deserted, and views are unconfined. Driving a car in such conditions is a relaxing and meditative process. But it’s important to remember that a large number of bridges in Iceland are single-lane. It’s not a single lane per direction, it’s a single lane per whole the bridge. That's why it's dangerous to give in completely to the flow of your thoughts. Before crossing the bridge it’s necessary to check that no one else started crossing the bridge from the other side. Once, I stopped to give way to a car going towards me, waited for about 3 minutes and seeing no one else moving decided to go first. The other driver waited for me on the other side of the bridge :)
+
+{{< youtube "eA-WwK2T0rc" "A single lane bridge" >}}
+
+Generally, waterfalls can be approached from two sides --- western and eastern, and I wanted to get there from the eastern side, I expected to see more impressive views from that side. However, much to my disappointment, the road from that side was closed. Well, “closed” is a bit of an exaggeration in this case, there was just a sign and the road behind it looked pretty good. But the text on the sign stated that addressing the car issues beyond this point will be expensive. All in all, I decided not to risk it and drove to the western side of the waterfalls.
+
+On my way to the waterfalls I also made an additional stop at Hverir, it’s a geothermal area that is covered with boiling puddles of sulphur, and the air here is saturated with corresponding aromas. This is not an ordinary place, but because of the smells I didn’t want to spend a long time there. Here I faced for the first time how parking works in Iceland in such touristic places. It should be paid either in the terminal or with a special mobile app. Convenient, but it’s not the most important thing. What's important is that parking has to be paid for a minimum of one day, even though a tourist will spend no more than a couple of hours at each such place. In the case of Hverir, even 40 minutes was more than enough for me :/ Parking costs 1000-1200 Kroner (7-8 Euro) per day, not expensive, but anyway it seems that the requirement to pay for parking for a whole day is a kind of scam.
+
+{{< embedded-gallery "2023/iceland/road-to-selfoss" >}}
+
+The waterfalls Dettifoss and Selfoss are part of the Jökulsá á Fjöllum river. Selfoss is upstream and cascades down from a height of 11 metres, forming a fairly deep canyon about 100 metres wide. A few hundred metres downstream is Dettifoss and its height is 44 metres. It's a truly extraordinary sight! Undoubtedly, this is a must-visit place in Iceland.
+
+All the necessary tourist infrastructure is built at this place: parking, hiking trails, toilets. Unfortunately, due to the weather, most of the hiking trails were closed. In summer one can go down to the river but in winter it’s possible to walk only along the upper edge of the canyon. However, this is where most of the scenery opens up.
+
+{{< youtube "Yz6qIzzv5ww" "Selfoss">}}
+
+The same day after the waterfalls I went to the Ásbyrgi canyon and this is without a doubt a 100% summer place, in November it's quite grey, dark, cloudy and gloomy.
+
+Daytime driving in northern Iceland is a pleasure, whereas in evening driving turns to a challenge. There are no torches along the roads here and the way can be determined only by the reflective stickers on the poles placed on the sides of the roads. You’re essentially driving in total darkness besides two rows of faint lights which can suddenly disappear. This means that there is a turn ahead and you need to carefully watch where the lights are turning.
+
+{{< youtube "TlEBGbbK_hI" "Evening and night roads">}}
+
+The northern lights forecast that day was bad, so upon returning to the hotel, I went to bed. Accidentally I woke up at 3 a.m. and decided to check the Kp-index. It was astoundingly big, 7 out of 9! I leaped out of bed and ran to the window, and there she was! Aurora! The first thought: “I have to get dressed quickly, grab the camera and run to watch it!” and then immediately the second thought: “Oh, come on! It’s cold outside and you have a whole week ahead, you will have plenty of time to see it. Get back to the warm and cosy bed”. It was truly a legendary battle between lazy sleepy me and curious sleepy me. Curious sleepy me won that battle. To my disappointment, by the time I reached the vantage point I had chosen in the morning, the Kp index had dropped to 5, and the lights were not as spectacular as I had seen them from the window.
+
+{{< embedded-local-gallery "2023-11-13_DSC09749-processed.jpg" >}}
+
+The next morning began with checking the news to see if the volcano had erupted or not. It hadn't, which was good, because the volcano was two days away from my current location, and I didn't want to rush there at the moment. The main goal for the day was the [Myvatn Nature Baths](https://myvatnnaturebaths.is) --- outdoor pools with water sourced from an underground well, which I mentioned earlier.
+
+Before going to the baths, I drove around the lake, but it was a cloudy day and I didn't see anything memorable. It seems that this place is better visited in summer. However, the baths gave me a very authentic experience. I spent about 3 hours there: pools, in the hottest one you can soak to the state of a boiled potato, and in the coldest one I could spend only a few minutes; saunas; ice-cold air with a temperature of -1°C. I think the most comfortable temperature for swimming here is 10°C, and in the current conditions my ears get cold all the time, so I was missing a hat. But on the other hand, if the air were warm, this experience wouldn't be so unique.
+
+Close to Reykjavik there is a similar place --- Blue Lagoon, generally this place, like everything else in that part of the island, is much more crowded by tourists, although during my trip it was the other way round --- it was closed due to the risk of volcanic eruption.  So I would add Myvatn Nature Baths as another recommended destination (_oh no! I'm ticking off the checklist!!!_). It's worth mentioning that I was lucky and most of the time I was there the pools were almost empty, sometimes I was even alone, but before I left a bus full of Chinese tourists arrived and they turned a quiet lagoon into a noisy, hectic mess.
+
+After a few hours of boiling myself in water, I first spent an hour cooling off in the cafeteria and then barely got to the hotel. I had no energy left for anything, and even if the Kp-index was a nine, no one could force me to go to see the northern lights. But there wasn't one that day.
+
+{{< embedded-gallery "2023/iceland/one-more-sunset" >}}
+
+### Part 3. South of Iceland: Vatnajökull glacier and its surroundings
+The next day I embarked to the southern part of the island, to the guest house on the farm near the Vatnajökull glacier. At one point I literally crossed the border between the north and the south of the island: the open spaces covered with the white sparkling in the sunlight snow just a few hundred of metres shifted to the brown-grey rainy sceneries. The rest of the journey mostly looked like that :/
+
+{{< youtube "alkPmO0DYr8" >}}
+
+_From Iceland to Rainland. And one more [link](https://youtu.be/PMzUn9gCf4s) to another video from the car's roof._
+
+I had overly optimistic expectations for this place. I hoped to experience what life on a real Icelandic farm is, whatever it means, because I knew nothing about them. In my imagination appeared blurry pictures of authentic cabins, traditional breakfasts and cattle phlegmatically grazing right by the entrance to the house. Instead of that, a cold, crowded with Chinese tourists, hangar on the outskirts of the farm awaited me. No farm ambiance, no festivity.
+
+The feeling of solitude was also unachievable, despite the closest civilization being 50 kilometres away from this place, exactly in that place was a high concentration of homo touristus and the chaos produced by them. In short, I’d better stay in a regular hotel rather than in this hole. At least I wouldn’t have to drive for 40 minutes to have lunch. But, frankly, all of these disadvantages aren't worth the time you spent on reading these lines. The way to this place took a whole day and the next morning in my plan I had an excursion to the Vatnajökull glacier and this was one of the most vibrant and memorable adventures in this journey.
+
+There are many tour companies here organising excursions to various parts of Vatnajökull; I feel uncomfortable in large groups of people, so I chose a tour to an ice cave with a group of up to 8 people, and in the end, there were even fewer of us: 5 tourists, including me, and the guide. In theory, you can organise such a route independently, but in that case, it requires very detailed planning, and I would recommend starting with a group tour anyway and asking the guide for details on when and where it's best to go alone and what nuances to consider when planning.
+
+Before the trip to Iceland I’d bought all the necessary equipment: warm tracking shoes, wind- and waterproof pants, a jacket and a backpack. But it’s not enough for conquering the glacier. We were given helmets, crampons, a harness, a special loop for the harness about a metre long, and an ice axe. It’s over cautious, was my first thought, but no, we actively used all of this equipment.
+
+The first part of the route involved climbing the glacier. Here, it's necessary to mention one important but not obvious detail. From a distance, the glacier looks like a mountain covered with a layer of ice. People who get used to Russian winters won’t find anything unusual here; ice in winter is not a surprise. However, this is only the case if you don't think about the thickness of the ice. It may seem that this layer is a few centimetres or metres thick, but in reality, the average thickness of the ice is 420 metres! Four hundred! Twenty! Metres! In other words, you're not climbing a mountain covered with a layer of ice, you're climbing a mountain of ice!
+
+While moving across the glacier's surface, we extensively used crampons, with every step you had to stomp your feet hard to break through the ice and not slip on its surface, as well as an ice axe to cling with it when climbing up inclined surfaces. The guide did a lot of work: on most difficult ascents he hammered steps in the ice for us.
+
+On one of the summits, the second stage awaited us: a descent to the ice cave, and it turned out to be the most entertaining part of the excursion. An alpine rope had been stretched along the slope in advance, for every 10-30 metres it was nailed into the ice with a special anchor. Using loops attached to our harnesses, we hooked ourselves to this rope and descended along it. When reaching the next anchor, we had to detach from the rope and reattach on the other side of the anchor. For safety reasons, only one person was allowed to be between two such anchors, so our entire group spread out over 50-100 metres. Every time you re-hooked yourself to the rope you had to signal to the person behind you that they could also continue on their way. This signal was a shout of "_MOZZARELLA!!!_".
+
+I imagine how amusing it could look from the outside: "_MOZZARELLA!!!_" --- someone shouts from somewhere ahead, _click_, disconnecting from the rope, _click_, rejoining from the other side of the anchor, "_MOZZARELLA!!!_" --- now it's your shout, and a few seconds later, echoing from somewhere behind, the other "mozzarellas" respond. After about 15-20 "mozzarellas", we reached the final stage of our route --- an ice cave.
+
+This cave was carved into the glacier by the air pushed out by the flow of a mountain river. It’s located on the mountainside, that’s why the cave isn't flat but inclined. Sunlight from the outside paints its inner surface in a vivid blue, and the light that penetrates through the ice makes the cave walls to lumine, glowing from within. According to the guide this place looks different in the summer: the scene we witnessed is enhanced by water streams cascading from the ceiling, formed by melting ice. In short -- an Instagrammable spot.
+
+The cave's depth, by my estimation, was about 20 metres, and as we descended further, it got darker. Towards the end, without flashlights, we couldn't see anything. The descent wasn't straightforward: we crisscrossed water streams, slid from large boulders, and jumped between big stones multiple times. Our ice gear, excluding helmets, weren’t helpful. Once out of the cave, we took a brief rest, had a snack, and then returned the same way we came. "_MOZZARELLA!!!_"
+
+The entire route took about 6 hours and was quite physically demanding, although I expected it to be harder. It's definitely an ideal place for a winter journey! Exploring the surroundings of Vatnajökull one should spend at least 2-3 days to examine its various areas.
+
+{{< embedded-gallery "2023/iceland/vatnajokull" >}}
+
+During this journey I was chased by weather setbacks: on the north of the island, from where I had arrived a day before, the clouds dispersed and the sky became perfect for seeing aurora, whereas here, on the south, it’s other way round, in the evening the sky was covered with the clouds and the light rain began. I didn’t have any chances to see the northern lights in such conditions, but I didn’t lose hope, I still had a few days of my travel ahead. As for the volcano eruption, it was silent: local authorities evacuated the town of Grindavik due to an earthquake near the eruption site, but there was no further development in the situation.
+
+The next day, my destination was the surroundings of the glacial lagoon Jökulsárlón and the nearby Diamond Beach. This location is considered ideal for observing the northern lights. It takes about 7 hours by bus from Reykjavik, and some tourists spend up to 14 hours just to get to the glacial lagoon on a tour. It's hard to imagine a more unpleasant day for such a journey: biting icy wind, drizzling rain, and a sky entirely cloaked in clouds. Neither I, nor the poor souls who had been killing their backs for 14 hours on a tourist bus saw the aurora on that day.
+
+However, even without the northern lights, this location is worth exploring. Bright blue icebergs with the grey-gray background of water and sky, black sand beaches with the scattered ice shards, and crowds of tourists clustered around the parking area, taking pictures of the icies. Interestingly, just about 300 metres from the parking lot, the beach is completely deserted.
+
+Attempting to capture beautiful shots, I soaked my legs in the sea waves twice. After the first time, I returned to the car, turned the heater to full power, and dried all my wet clothes within an hour. After the second time, I was too lazy to go through the same routine, so I continued walking as is. The next day, apparently, I regretted it --- cold symptoms appeared, but I quickly managed to suppress them.
+
+{{< embedded-gallery "2023/iceland/glacier-lagoon" >}}
+
+At this point, I started to worry that I hadn't really experienced the northern lights on this journey. Today's forecast didn't inspire optimism, and I realised it was time to stop passively waiting for the aurora and start actively hunting for it. The next day, a journey to Reykjavik awaited me --- not the ideal place for watching the northern lights, but it was still possible to catch a glimpse there.
+
+### Part 4. Reykjavik
+On the way to Reykjavik I took one of the best photos of the whole trip, from my point of view. I took this picture at the golden hour of the evening, which was around 3 p.m. In reality, the land here is brown and the rocks are grey, but the setting sun turned everything golden.
+
+{{< embedded-gallery "2023/iceland/way-to-rejkyavik" >}}
+
+I reached Reykjavik in the evening, so going anywhere else didn't make sense. I explored the city and found a good spot to observe the aurora. The experience of being in Reykjavik is quite different from the remaining Iceland. It's a noisy, bustling city with quite aggressive drivers. I felt here like I was in Moscow: heavy traffic, everyone rushing, one aborigine honked at me for what he thought was driving too slowly.
+
+The next day, like all the previous ones, began with checking the weather forecast, and once again, it was disappointing: the chances of seeing the northern lights, at least around Reykjavik, and the chances of witnessing a volcanic eruption were slim.
+
+On this day, I explored the key points of the Golden Circle. To keep it brief: without exaggeration, the number of tourists here is at least 20 times greater than in any other parts of Iceland I visited. The locations are undoubtedly interesting, but if you can, it's better to stay away.
+
+Gullfoss waterfall is not as tall as Dettifoss, but its distinctive feature is that it consists of two adjacent steps. This sets it apart from other waterfalls. Unfortunately, some walking paths were closed here for the winter, but unlike Dettifoss, it seems that the closed sections offer more interesting views.
+
+Another point on the route near Gullfoss is the Haukadalur geyser valley. Here, the geyser Geysir, which gave its name to all geysers in the world, is located. The geyser Geysir itself erupts extremely rarely, but the nearby geyser Strokkur does it every 10-15 minutes. _It seems that the maximum concentration of geysers in the world is not in the geyser valley, but in this paragraph._
+
+{{< embedded-gallery "2023/iceland/golden-circle" >}}
+
+In the evening, within a hundred kilometres around Reykjavik, the entire sky was covered with a dense blanket of clouds, eliminating any chances for me to observe the sky… and just like that, suddenly the last day of my journey in Iceland sneaked in, so it's time to admit that my initial plans to see the northern lights can be considered a failure. However, even without the aurora, the trip turned out to be filled with vivid impressions. If I were planning a similar route now, I would definitely remove all activities related to the Golden Circle and other places around the capital and dedicate more time to the glaciers, not just Vatnajökull.
+
+In the second half of the last day I had to return the car, so I had only a few hours left to go somewhere else. Iceland lies on the rift between the Eurasian and North American tectonic plates. In the rift area, a bridge was constructed to attract tourists, providing a passage from one plate to another. This bridge became one of my last stops in Iceland. I'm not sure, but it seems to me that this bridge is purely symbolic, and in reality, the fault line may be somewhere else.
+
+A short distance from the bridge, there's yet another valley with geysers, and I decided to make a stop. Perhaps, by that time, I was either tired from the journey or had become saturated with such attractions, but another place with hot water fountains and sulphur-infused air didn't impress me much.
+
+{{< youtube "E5E_VqsARBA" >}}
+
+After that trip, I returned the car and the next night at 2 a.m. I had to somehow get from the hotel to the airport. I still didn't have any local currency, so I faced the same problem as on the first day: public transport doesn't run at night, and taxi drivers only accept cash. In short, without leaving the rental office, I took another car for one day. In fact, it turned out to be even cheaper than a taxi: a taxi would have cost around 150 euros, and for the tiny Kia Picanto, which, by the way, turned out to be much nimbler than the trash bin Duster I had been driving before, I paid only 98 euros.
+
+Aaaand... the fact that I had a car for the evening gave me one last chance to catch the aurora! The weather around Reykjavik was terrible again: rain, clouds, poor visibility, but about a hundred kilometres from the city the forecast was promising! A hundred kilometres is just one hour drive, I reasoned. I had about 10 hours before the flight, enough time to make a quick trip! In and out, a 20-minute adventure! After about one hour, I found myself in absolute darkness, in the fog under pouring rain on some unfamiliar road, racing in a stream of cars. Visibility literally was limited to about 20 metres. I no longer wanted to go further, and had a fear of not being able to return in time, so maybe I should turn back. The only problem was that there was nowhere to turn! The road was completely invisible, not even the reflective poles along it, and the traffic (both oncoming and behind me) was quite dense. I felt like a grain of sand being carried away in this swift stream, and it was unclear how to break free. But suddenly, I saw a lifesaving exit! Hooray! Now I'll turn off the main highway, get out of the stream, and calmly turn around... but no, some of the cars took the exit with me, and I still had nowhere to slow down and turn around. In short, another 15 minutes of such intense driving, both emotionally and physically, and I found an empty exit where I turned around and headed back to the hotel. I was back at the hotel by 11 p.m., and I had to leave for the airport by 2 a.m. In a word, driving in Iceland at night, especially in bad weather, is an experience that is best avoided whenever possible.
+
+That's all the most interesting things I have to tell. Overall, it turned out to be a fantastic adventure.
+
+{{< embedded-gallery "2023/iceland/last-day" >}}
+
+P.S. I'm finishing writing these lines on December 17, 2023, and the volcano still hasn't erupted :/
+
+P.P.S. The eruption occurred on December 18, 2023.
+
