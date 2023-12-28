@@ -2,61 +2,63 @@
 title: Journey around Iceland
 date: 2023-12-09 13:00:57 +0100
 publishDate: 2023-12-17 21:22:41 +0100
+lastmod: 2023-12-28 11:44:08 +0100
 draft: true
 featured: true
 tags: [Iceland, Reykjavik, Akureyri, waterfall, Selfoss, Dettifoss, Mývatn, Vatnajökull, Jökulsárlón, Diamond beach, Gullfoss, geysir Geysir, aurora borealis, northen lights, travel, ]
 ---
-The term grill tourism has been well-established in my lexicon for a long time --- this is a type of holiday where a tourist isn’t actively involved in the planning of his trip. A tour operator drives a tourist like a roasted chicken in a bus-oven from a hotel to points of interest and the tourist’s goal is either to lie on the beach and be covered in a crispy sun-tan crust, or gazing out of the window while seated on a bus. Or even there isn’t a tour operator and you are just lying for a week under the sun in a chaise longue in an all-inclusive hotel. It’s grill tourism as well. This term used to have a strictly negative meaning to me, but now it has become more neutral: sometimes you just want to switch off your brain and do nothing. There is nothing wrong with it, but it’s important to mix grill-holidays with more eventful itineraries, since grill-tourism is monotonous and tedious.
+The term grill tourism has been well-established in my lexicon for a long time --- this is a type of holiday where a tourist isn’t actively involved in the planning of his trip. A tour operator drives a tourist like a roasted chicken in a bus-oven from a hotel to points of interest and the tourist’s goal is either to lie on the beach and be covered in a crispy sun-tan crust, or gazing out of the window while seated on a bus. Or even there isn’t a tour operator and you are just lying for a week under the sun in a chaise longue in an all-inclusive hotel. It’s grill tourism as well. This term used to have a strictly negative meaning to me, but now it has become more neutral: sometimes you just want to switch off your brain and do _nothing_. There is nothing wrong with it, but it’s important to mix grill-holidays with more eventful itineraries, since grill-tourism is monotonous and tedious.
 
 {{< img "grill-bus.png" "DALL-E and a couple of other neural networks are sponsors of this picture" >}}
 
 Through recent observations (and also based on some of my own adventures) I’ve extracted one more category of holidays --- checklist-tourism. The goal of a checklist-tourist is to see as many things as possible and to set as many check marks as possible in an imaginary (or maybe in a real) checklist at all costs within a single short trip. On the one hand, you really can see a lot, but on the other hand --- you’re always in a rush, you don’t have space to manoeuvre and you can’t afford to spend more time in a place you like. It'd be better to avoid checklist-tourism: memories from such trips fade and are squashed into one evenly grey lump of plasticine and over time you can no longer separate one episode of the adventure from another.
 
-With these two vacation types in my mind I’d approached the planning of my trip to Iceland. Prior to the journey, my perception of the country was superficial and romanticised, as if it were a snow-covered island out of a fairy tale. This perception was amplified by a plethora of blog posts and photos from the internet, showing truly incomparable scenes that reinforce this image: ice caves with the walls lumining from the inside, northern lights, beaches of black sand and shards of ice sparkling in the sunlight. However, the vast majority of these exceptional views are nothing more than marketing tricks aimed at attracting tourists, rare shots taken by professionals at a brief and lucky moment.
+With these two vacation types in my mind I’d approached the planning stage of my trip to Iceland. Prior to the journey, my perception of the country was superficial and romanticised, as if it were a snow-covered island out of a fairy tale. This perception was amplified by a plethora of blog posts and photos from the internet, showing truly incomparable scenes that reinforce this image: ice caves with the walls lumining from the inside, the Northern Lights, beaches of black sand and shards of ice sparkling in the sunlight. However, the vast majority of these exceptional scenes are nothing more than marketing tricks aimed at attracting tourists; rare shots taken by professionals at a brief and fortunate moment.
 
 ### What to do in Iceland?
-In short, itinerary planning nowadays is complicated by the fact that the real pearls have to be sifted out from the marketing noise. So here's a list of interesting things I've learned about Iceland.
+In short, itinerary planning nowadays is complicated by the fact that the real pearls have to be sifted out from the marketing noise. So I am going to write about some of the interesting things I’ve learned about Iceland.
 
-There are about 360 thousand people living in Iceland and almost half of them in Reykjavik. In other words, it's definitely the kind of place one should avoid at all costs, since the feeling of solitude is one of the reasons why it's worth travelling to Iceland. The overall population density across the entire island is about 3.5 individuals per square kilometre, whereas in Reykjavik, the density reaches 490 people per square kilometre. For instance, the population density in Berlin is approximately 4000, and in Moscow it is about 5000 individuals per square kilometre.
+There are about 360 thousand people living in Iceland and almost half of them are in Reykjavik. In other words, it's definitely the kind of place one should avoid at all costs, since the feeling of solitude is one of the reasons why I think it's worth travelling to Iceland. The overall population density across the entire island is about 3.5 individuals per square kilometre, whereas in the capital city, the density reaches 490 people per square kilometre. For comparison, the population density in Berlin is approximately 4000, and in Moscow it is about 5000 individuals per square kilometre.
 
-There are 130 volcanoes grouped into 30 volcanic clusters here and they erupt every now and then. Local companies organise excursions to the erupting volcanoes! Observing streams of live lava is a truly unique and irreplaceable experience. It’s hard to imagine where else one could undergo such an adventure. But, apparently, aligning your itinerary for the eruption it’s either a matter of great luck, or a substantial amount of free time.
+There are 130 volcanoes grouped into 30 volcanic clusters here and they erupt occasionally. Local companies organise excursions to the erupting volcanoes! Observing streams of live lava is a truly unique and once in a lifetime experience. It’s hard to imagine where else on Earth one could go for such an adventure. Apparently, however, aligning your itinerary for the eruption is either a matter of immense luck, or a substantial amount of freedom to book a last-minute vacation and fly directly to see the eruption sight.
 
-_The picture below I found on the internet. This is how an excursion to the erupting volcano could look like, if it weren't for photoshopped lava._
+_The picture below I found on the internet. This is how an excursion to the erupting volcano could look like, save for the photoshopped lava._
 
 {{< img "volcano-excursion.jpg" "A picture from the internet. The lava looks photoshopped" >}}
 
-Apart from volcanoes there are geysers as well. By the way, all the geysers in the world are named on behalf of the geyser Geysir that is located nearby to Reykjavik.
+Apart from volcanoes there are geysers as well. By the way, all the geysers in the world are named after the geyser Geysir that is located near Reykjavik.
 
-There are several large glaciers with absolutely extraterrestrial sceneries, ice caves, rivers and waterfalls. One of the glaciers was used as a setting for two planets in the movie Interstellar (undoubtedly the best science fiction movie ever made).
+There are several large extraterrestrial-looking glaciers, ice caves, rivers and waterfalls. One of the glaciers was used as a setting for two planets in the movie Interstellar (undoubtedly the best science fiction movie ever made).
 
-Besides Interstellar there are many other movies that have been filmed in Iceland. The movie “The Secret Life of Walter Mitty” was one of the reasons why I decided to drive along the desolated Iceland’s roads. Around the island, closely following the coastline, is Route 1 --- a circular road stretching about 1300 kilometres, granting access to nearly all local landmarks throughout the year. Some of the island's roads are closed in winter, so it’s important to bear that in mind when planning a route.
+Besides Interstellar, there are many other movies that have been filmed in Iceland. The movie “The Secret Life of Walter Mitty” was one of the reasons why I decided to drive along the desolated Icelandic roads. Around the island, closely following the coastline, is Route 1 --- a ring road stretching about 1300 kilometres, granting access to nearly all the local landmarks throughout the year. Some of the island's roads are closed in the winter, so it’s important to bear that in mind when planning a route.
 
-Golden Circle and Diamond Circle --- two popular tourist car routes. The first is close to Reykjavik and the second to the north-east of the island, close to Lake Myvatn and the waterfalls Dettifoss and Selfoss. Both routes can be completed in 1-2 days and the second one looks more attractive, since it's further away from the capital and crowds of tourists.
+Golden Circle and Diamond Circle are two popular tourist vehicle routes. The first is close to Reykjavik and the second is in the north-east of the island, close to Lake Myvatn and the waterfalls Dettifoss and Selfoss. Both routes can be completed from one to two days and the second one is more scenic, since it's further away from the capital and crowds of tourists.
 
-Waterfalls! There are several of them here and these are not just typical mountain brooks gently descending from a few metres, these are powerful, expansive rivers! Europe's mightiest waterfall, Dettifoss, spans 100 metres in width, and its torrents cascade from a height of 44 metres!
+Waterfalls! There are several of them here and they are not just typical mountain brooks gently dripping from a few metres, they are powerful, expansive rivers! Europe's mightiest waterfall, Dettifoss, spans 100 metres in width, and its torrents cascade from a height of 44 metres!
 
-_Aurora borealis_ --- northern lights can be observed in Iceland. This was a reason why I decided to visit Iceland in November, the prime aurora season running from November to February.
+_Aurora borealis_ --- the Northern Lights can be observed in Iceland. This was the reason why I decided to visit Iceland in November; the prime aurora season which runs from November to February.
 
-Surprisingly, diving and snorkelling are available here! Yes, the water temperature in November is below 10 degrees, so a dive requires a drysuit and an appropriate preparation. But anyway, it's still a viable option!
+Surprisingly, diving and snorkelling are available here! Yes, the water temperature in November is below 10 degrees, so a dive requires a drysuit and the appropriate preparation. But anyway, it's still a viable option!
 
-Fauna: whales, seals, birds, deers, horse riding. Many activities here involve animals, but November is not the peak season for such entertainments.
+Fauna: whales, seals, birds, deer, horses. Many activities here involve animals, but November is not the peak season for such entertainment.
 
-If a wallet permits (on average the typical European prices can be safely doubled in Iceland), one can rent a helicopter to fly to the summit of one of the local mountains.
+If your wallet permits (on average the typical European prices can be safely doubled in Iceland), you can rent a helicopter to fly to the summit of one of the local mountains.
 
-Another type of attraction is the natural baths --- outdoor pools where the water is drawn from underground boreholes and has a temperature of 36-40 celcius, depending on the location. It's quite an exotic contrast --- you walk out of a warm changing room to the street where the temperature is below zero, run about 10 metres, and jump into a hot pool. The Russian sauna, on the contrary :)
+Another type of attraction is the natural baths --- outdoor pools where the water is drawn from underground boreholes and has a temperature of 36-40°C, depending on the location. It's quite an exotic contrast --- you walk out from a warm changing room to the fresh air where the temperature is below zero, waddle about 10 metres, and jump into a hot pool. The opposite of a Russian sauna :)
 
-Iceland is one of the few places with a very little artificial light. This makes driving very difficult at night, which falls around 6 p.m. in November. On the flip side, a large part of the island has a Bortle scale index from 1 to 3, allowing you to see the Milky Way with the naked eye... as long as the sky remains cloud-free.
+Iceland is one of the few places with very little artificial light. This makes driving very difficult at night, which falls around 6 p.m. in November. On the flip side, a large part of the island has a Bortle scale index from 1 to 3, allowing you to see the Milky Way with the naked eye... as long as the sky remains cloud-free.
 
 ### Planned route
-Iceland is a place where a grill-tourist has nothing to do, all the activities there imply activity: a lot of driving, even more outdoor hiking under the pouring icy rains and penetrating cold winds, requiring a high level of energy.
+Iceland is a place where a grill-tourist has nothing to do, all the activities there imply activity: a lot of driving with even more outdoor hiking under the pouring icy rains and penetrating cold winds, requiring a high level of energy.
 
-Even a month wouldn’t be enough to try everything I mentioned above without a rush. I had only 10 days, so to not turn to a grill-tourist I had to significantly cut the list. Finally, I came up with the following route:
-- Fly to Reykijavik, it’s located in the west side of the island, and the very next day with the domestic airlines fly to Akureyri, a town on the north-west of the island,
-- In Akureyri, rent a car and explore the surroundings of the Diamond Circle: the Myvatn Lake, geysers and waterfalls, and natural baths. All these things are here and they’re not as heavily crowded with the tourists as Reykjavik’s area. Every night observing northern lights,
-- Then drive to the south of the island to the Vatnajökull glacier area and spend a few days there. Live in a guest house on a farm, which is located barely 50 kilometres away from civilization! It supposed to be an unmatchable experience: live in an isolated place, hike the glaciers and black sand beaches by day, and watch the northern lights at night,
-- After 3 days there, drive back to the west, towards Reykjavik, where explore its surroundings and watch the northern lights. Then return back the car and fly back home.
+Even a month wouldn’t be enough to try everything I mentioned above without a rush. I had only 10 days, so to not turn into a grill-tourist I had to significantly cut down the list. Finally, I came up with the following route:
+- Fly to Reykijavik, it’s located on the west side of the island, and the very next day with a domestic airline fly to Akureyri, a town on the north-west of the island,
+- In Akureyri, rent a car and explore the surroundings of the Diamond Circle: the Myvatn Lake, geysers and waterfalls, and natural baths. All these things are here and they’re not as heavily crowded with tourists as Reykjavik’s area. Every night observing the Northern Lights,
+- Then drive to the south of the island to the Vatnajökull glacier area and spend a few days there. Stay in a guest house on a farm, which is located barely 50 kilometres away from civilization! It is supposed to be an unmatchable experience: stay in an isolated place, hike the glaciers and black sand beaches by day, and watch the Northern Lights by night,
+- After 3 days there, drive back to the west, towards Reykjavik to explore its surroundings and watch the Northern Lights. Then return the car and fly back home.
 
 Of course, not everything went according to plan, and I'm going to tell the story of this adventure.
+
 {{< embedded-gallery "2023/iceland/first-gallery" >}}
 <!--more-->
 
