@@ -14,7 +14,7 @@
                 <p>{{ .Summary | safeHTML }}</p>
                 {{ end }}
             </div>
-            <div class="post_nav"><a href="{{ .RelPermalink | relURL }}" class="link-arrow">{{ i18n "readMore" }} ➠</a></div>
+            <div class="post_nav"><a href="{{ .RelPermalink | relURL }}#read-more" class="link-arrow">{{ i18n "readMore" }} ➠</a></div>
         </div>
     </article>
 </div>

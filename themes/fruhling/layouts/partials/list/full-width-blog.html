@@ -21,7 +21,7 @@
                 <p>{{ .Summary | markdownify }}</p>
                 {{ end }}
             </div>
-            {{- if .Truncated -}}<div class="post_nav"><a href="{{ .RelPermalink | relURL }}" class="link-arrow">{{ i18n "readMore" }} ➠</a></div>{{- end -}}
+            {{- if .Truncated -}}<div class="post_nav"><a href="{{ .RelPermalink | relURL }}#read-more" class="link-arrow">{{ i18n "readMore" }} ➠</a></div>{{- end -}}
         </div>
     </article>
 </div>
