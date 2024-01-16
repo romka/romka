@@ -16,9 +16,9 @@ Me and my wife Olya had been dreaming for a long time about relocating from Russ
 
 In Russia, Olya had been working for a Russian representative of a German company when in the summer of 2020 that company decided to close its Russian office and Olya was invited to continue working in the Berlin office.
 
+{{< more >}}
 {{< embedded-gallery "2022/pereezd-v-berlin-2021/chapter-1" >}}
 <!--more-->
-{{< more >}}
 
 ## Relocation
 

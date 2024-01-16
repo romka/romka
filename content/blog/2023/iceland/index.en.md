@@ -59,9 +59,9 @@ Even a month wouldn’t be enough to try everything I mentioned above without a 
 
 Of course, not everything went according to plan, and I'm going to tell the story of this adventure.
 
+{{< more >}}
 {{< embedded-gallery "2023/iceland/first-gallery" >}}
 <!--more-->
-{{< more >}}
 
 ### Part 1. Reykjavik and Akureyri
 I flew to Reykjavik on Friday afternoon, that’s why I had to take an additional day off work. The thing is, international and domestic airports are located in neighbouring cities and it was more convenient for me to fly to Akureyri one day after arriving in Reykjavik. However, the problem was that the rental-car company office wasn’t open on Sundays! That’s why I had to get to Akureyri on Saturday. It may seem like a minor detail, but the itinerary had to be adapted.

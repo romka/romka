@@ -12,9 +12,10 @@ I can’t say that since then I’ve been fanatically hunting for the place wher
 And so, now in December 2022, I decided to take a trip to the Balkans. In terms of the weather, it’s far from the best time to visit the Balkan Peninsula, but there were three reasons why it wasn’t so important. Firstly, I had to take a vacation before the end of the year (otherwise, by German laws, it would simply burn). Secondly, I got the chance to see my old friends who recently relocated to Belgrade. And finally, and perhaps most importantly, I got the chance to taste a traditional pljeskavica cooked by authentic Serbian chefs. This gave me some hope that I would find my ideal pljeskavica like the one from 2008.
 
 The first stop on my trip was Belgrade, then I flew to Sarajevo and finally returned to Berlin with another overnight stop in Belgrade. In my original route I also had a stop in Tirana, Albania’s capital, but AirSerbia changed their flight schedule shortly before my trip started and this change made it impossible for me to get to Albania this time. I’ll share my impressions about the cities later, but for now, I’ll continue my story about hunting for the perfect pljeskavica.
+
+{{< more >}}
 {{< embedded-gallery "2022/serbia-bosnia-2022/belgrade" >}}
 <!--more-->
-{{< more >}}
 
 I had a hypothesis: that first pljeskavica is so deeply ingrained in my mind not because it actually was so good, but because of the confluence of circumstances: youth, good weather, good mood, street food — all of these things enhanced the taste of the meal that may not have been so perfect as I remembered it. So, first of all, I decided to try a street-food pljeskavica in Belgrade. It didn't go over well. In the kiosk on the Knez Mihailova street they just warmed up an already-cooked patty instead of cooking it from fresh meat. That pljeskavica didn’t have any chance to match the perfect one.
 
