@@ -1,5 +1,0 @@
-{{- if eq .Page.Type "gallery" -}}
-    {{- partial "partials/list/json/gallery.json" . -}}
-{{- else -}}
-    {{- partial "partials/list/json/blog.json" . -}}
-{{- end -}}
