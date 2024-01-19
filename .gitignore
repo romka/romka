@@ -1,7 +1,6 @@
 .idea
 public/
 resources/
-themes/fruhling/
 .hugo_build.lock
 hugo.log
 romkaeu.iml
