@@ -9,6 +9,7 @@ languagecode = "ru-ru"
 enableRobotsTXT = true
 googleAnalytics = "G-CTT4LY4QD1"
 timeout = "1800s"
+relativeURLs = true
 
 [markup.goldmark.renderer]
     unsafe= true
