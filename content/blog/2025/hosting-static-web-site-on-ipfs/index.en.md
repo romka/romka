@@ -4,7 +4,7 @@ date: 2025-02-15 08:50:12 +0100
 draft: false
 tags: [Work, ipfs, tutorial, hugo, website]
 ---
-In the [previous blog post]({{< relref "/blog/2025/ipfs" >}}), I covered the basic principles of IPFS and its features. In this article, I'm going to explore a more advanced use case—hosting a static website on IPFS.
+In the [previous blog post]({{< relref "/blog/2025/ipfs" >}}), I covered the basic principles of IPFS and its features. In this article, I'm going to explore a more advanced use case -- hosting a static website on IPFS.
 
 Before diving in, I'd like to briefly explain the difference between dynamic and static websites.
 
@@ -27,9 +27,9 @@ Actually, only the first two steps are required, but the remaining two make acce
 
 ### ipfs daemon
 Before setting up access to the IPFS version of the website, it's important to note that the _ipfs daemon_ must be running on the server handling IPFS requests for the site. The _ipfs daemon_ is a program that implements the IPFS protocol. It listens on several network ports, the most important being:
-- `4001` — handles IPFS requests,
-- `8080` — local web gateway,
-- `5001` — web UI.
+- `4001` -- handles IPFS requests,
+- `8080` -- local web gateway,
+- `5001` -- web UI.
 
 The `4001` port must be accessible from the internet; otherwise, other IPFS nodes won't be able to find your node. The `8080` port should also be open, but it's best to place a reverse proxy in front of it. I'll cover this in more detail later. Access to port `5001` **MUST BE blocked from the internet!**
 
@@ -54,7 +54,7 @@ What would a link from `blog/2025/ipfs/index.html` to `img/logo.png` look like? 
 - Relative to the website's root: `/img/logo.png`
 - Relative to the current directory: `../../../img/logo.png`
 
-In general, if we're not talking about publishing a website to IPFS, the first approach is preferable—it's shorter and easier to read. However, in our case, only the link relative to the current directory will work. Let's break down why.
+In general, if we're not talking about publishing a website to IPFS, the first approach is preferable -- it's shorter and easier to read. However, in our case, only the link relative to the current directory will work. Let's break down why.
 
 I [already mentioned]({{< relref "/blog/2025/ipfs/#using-the-official-ipfs-client" >}}) the `ipfs add <filename>` command, which adds a file to IPFS. To add the contents of a directory, use the `-r` flag: `ipfs add -r <dirname>`. With this flag, a CID is computed for each file and subdirectory, and all of them are published in IPFS.
 
@@ -120,7 +120,7 @@ It's important to note that without `--nocopy`, deleting the original file won't
 
 ### Accessing the website via a local web gateway
 
-The `ipfs add -r --nocopy <dirname>` command prints a full list of processed files and their CIDs to stdout. In my case, processing the files takes around 5 minutes. The last line of the output contains the root directory's CID—this is the key part. Copy this CID and use it to access the site via any web gateway, for example: `https://ipfs.io/ipfs/<CID>`.
+The `ipfs add -r --nocopy <dirname>` command prints a full list of processed files and their CIDs to stdout. In my case, processing the files takes around 5 minutes. The last line of the output contains the root directory's CID -- this is the key part. Copy this CID and use it to access the site via any web gateway, for example: `https://ipfs.io/ipfs/<CID>`.
 
 Unfortunately, with the current configuration, the website will be painfully slow, since the content is served by only a single node, and file lookup in IPFS isn't fast. There’s a good chance that, every now and then, requests to the site via public web gateways will hit a _504 Gateway Timeout_ error. To fix this, you need to set up access to the local web gateway. I don’t recommend exposing port `8080` to the open internet. Instead, it's better to set up a subdomain handled by Nginx, which will proxy all requests to the IPFS daemon.
 
@@ -158,7 +158,7 @@ The idea is simple: in the DNS settings, you can add a `TXT` record with a name 
 With these settings, each time the IPFS daemon receives a request for `<hostname>`, it fetches the default CID or IPNS entry linked to the requested hostname from DNS. As a result, site visitors don't need to remember the front page's CID -- it’s automatically pulled from DNS.
 
 ### IPNS
-With dnslink, the responsibility of specifying the website's front page CID shifts from users to the website developer. If an IPFS link is used in dnslink, the DNS entry will have to be updated every time the site is updated. This is inconvenient, so it's better to use IPNS -- InterPlanetary Name System—here instead. I already mentioned it in the [previous blog post]({{< relref "/blog/2025/ipfs/#but-why-is-data-immutable-and-what-is-the-point-in-it" >}}). 
+With dnslink, the responsibility of specifying the website's front page CID shifts from users to the website developer. If an IPFS link is used in dnslink, the DNS entry will have to be updated every time the site is updated. This is inconvenient, so it's better to use IPNS -- InterPlanetary Name System -- here instead. I already mentioned it in the [previous blog post]({{< relref "/blog/2025/ipfs/#but-why-is-data-immutable-and-what-is-the-point-in-it" >}}). 
 
 The idea is simple: each IPFS node has a unique cryptographic key, and a permanent IPNS alias associated with this key can be created for each node. This IPNS alias can be linked to any CID. Then, instead of a CID, an IPNS alias can be used in dnslink. If the front page's CID changes, it's enough to update the IPNS record with the command `ipfs name publish /ipfs/<NewCID>`, eliminating the need to modify the DNS settings.
 
@@ -169,7 +169,7 @@ _dnslink.ipfs   TXT     dnslink=/ipns/k51qzi5uqu5dizn6ymg87i7ni9oieklsqgchw1qk5l
 ```
 With these settings, the IPFS version of this blog is accessible at `http://ipfs.romka.eu`, or via public web gateways using a link like `https://ipfs.io/ipns/k51qzi5uqu5dizn6ymg87i7ni9oieklsqgchw1qk5lnr6ln88abocxg9ifv0cb/`.
 
-It's important to keep in mind that IPNS records have a limited Time To Live (TTL)—by default, 24 hours—so it's necessary to set up automatic updates for them. This can be achieved with the following configuration:
+It's important to keep in mind that IPNS records have a limited Time To Live (TTL) -- by default, 24 hours -- so it's necessary to set up automatic updates for them. This can be achieved with the following configuration:
 ```bash
 romka@laptop:~$ ipfs config --json Ipns.UsePubsub true
 ```
@@ -178,4 +178,4 @@ romka@laptop:~$ ipfs config --json Ipns.UsePubsub true
 
 That's it! Once these steps are done, your website will be live on IPFS.
 
-As I mentioned in my previous post, IPFS is still a niche solution, and hosting websites on it is more of an experiment than a practical choice. But who knows—maybe in the future, it will gain broader adoption.
+As I mentioned in my previous post, IPFS is still a niche solution, and hosting websites on it is more of an experiment than a practical choice. But who knows -- maybe in the future, it will gain broader adoption.
