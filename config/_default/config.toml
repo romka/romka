@@ -25,3 +25,4 @@ relativeURLs = true
     remark_url = "https://romka.eu/remark42"
     remark_site_id = "romkaeu"
     robots_txt_disallow_all = false
+    canonicalURL = 'https://romka.eu'
