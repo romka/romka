@@ -165,6 +165,12 @@ def is_allowed_path(path: Path) -> bool:
 
 
 def sanitize_telegram_html(html: str) -> str:
+    # Remove unsupported tags completely
+    html = re.sub(r"<img\b[^>]*\/?>", "", html, flags=re.IGNORECASE)
+    html = re.sub(r"</?div\b[^>]*>", "", html, flags=re.IGNORECASE)
+    html = re.sub(r"</?iframe\b[^>]*>", "", html, flags=re.IGNORECASE)
+
+    # Format paragraphs and line breaks for Telegram
     html = re.sub(r"</p\s*>", "\n", html)
     html = re.sub(r"<p\s*>", "", html)
     html = re.sub(r"<br\s*/?>", "\n", html)
@@ -178,11 +184,6 @@ def cleanup_raw_text(text: str) -> str:
 
     # Replace inline code with <code> tags
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
-
-    # Remove unsupported HTML tags like <img>, <div>, <iframe>, etc.
-    text = re.sub(r"<img\b[^>]*\/?>", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"</?div\b[^>]*>", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"</?iframe\b[^>]*>", "", text, flags=re.IGNORECASE)
 
     return text
 
