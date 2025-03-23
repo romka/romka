@@ -172,6 +172,21 @@ def sanitize_telegram_html(html: str) -> str:
     return html.strip()
 
 
+def cleanup_raw_text(text: str) -> str:
+    # Remove Hugo shortcodes like {{< ... >}}
+    text = re.sub(r"\{\{<[^>]+>\}\}", "", text)
+
+    # Replace inline code with <code> tags
+    text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
+
+    # Remove unsupported HTML tags like <img>, <div>, <iframe>, etc.
+    text = re.sub(r"<img\s+[^>]*>", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"<div\s+[^>]*>|</div>", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"<iframe\s+[^>]*>|</iframe>", "", text, flags=re.IGNORECASE)
+
+    return text
+
+
 def build_message(post, url: str, lang: str) -> str:
     title_raw = post.get("title", "")
     content_parts = post.content.split("<!--more-->")
@@ -180,8 +195,7 @@ def build_message(post, url: str, lang: str) -> str:
 
     read_more_text = LANG_TO_TELEGRAM[lang]["read_more_text"]
 
-    preview_raw = re.sub(r"\{\{<[^>]+>\}\}", "", preview_raw) # remove Hugo shortcodes
-    preview_raw = re.sub(r"`([^`]+)`", r"<code>\1</code>", preview_raw)
+    preview_raw = cleanup_raw_text(preview_raw)
 
     parts = []
 
