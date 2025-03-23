@@ -21,6 +21,11 @@
     weight = 300
     url = "/gallery"
 [[ru.menu.main]]
+    name = "Заметки"
+    identifier = "note"
+    weight = 400
+    url = "/note"
+[[ru.menu.main]]
     name = "en"
     identifier = "en"
     weight = 1000
@@ -41,6 +46,11 @@
     weight = 300
     identifier = "gallery"
     url = "/en/gallery"
+[[en.menu.main]]
+    name = "Notes"
+    weight = 400
+    identifier = "note"
+    url = "/en/note"
 [[en.menu.main]]
     name = "ru"
     identifier = "ru"

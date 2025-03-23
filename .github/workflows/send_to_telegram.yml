@@ -1,0 +1,45 @@
+name: Send posts to Telegram
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**'
+
+jobs:
+  telegram:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Run Telegram post script
+        env:
+          TELEGRAM_CHAT_ID_RU: ${{ vars.TELEGRAM_CHAT_ID_RU }}
+          TELEGRAM_BOT_TOKEN_RU: ${{ secrets.TELEGRAM_BOT_TOKEN_RU }}
+        run: |
+          source venv/bin/activate
+          find content -name "*.md" | while read file; do
+            python telegram-data/post_to_telegram.py "$file"
+          done
+
+      - name: Commit and push telegram mappings
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add telegram-data/telegram_mappings.csv
+          git commit -m "Update telegram mappings [skip ci]" || echo "No changes to commit"
+          git push

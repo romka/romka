@@ -7,3 +7,8 @@ romkaeu.iml
 *.sh
 .netlify
 .obsidian
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
