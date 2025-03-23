@@ -180,9 +180,9 @@ def cleanup_raw_text(text: str) -> str:
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
 
     # Remove unsupported HTML tags like <img>, <div>, <iframe>, etc.
-    text = re.sub(r"<img\s+[^>]*>", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"<div\s+[^>]*>|</div>", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"<iframe\s+[^>]*>|</iframe>", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"<img\b[^>]*\/?>", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"</?div\b[^>]*>", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"</?iframe\b[^>]*>", "", text, flags=re.IGNORECASE)
 
     return text
 
