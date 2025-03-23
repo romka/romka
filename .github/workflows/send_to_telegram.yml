@@ -29,14 +29,14 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
-      - name: Run Telegram post script
+      - name: Run Telegram post script (only changed Markdown files)
         env:
           TELEGRAM_CHAT_ID_RU: ${{ vars.TELEGRAM_CHAT_ID_RU }}
           TELEGRAM_BOT_TOKEN_RU: ${{ secrets.TELEGRAM_BOT_TOKEN_RU }}
         run: |
           source venv/bin/activate
-          git fetch origin main
-          git diff --name-only origin/main...HEAD | grep '\.md$' | while read file; do
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$' || true)
+          for file in $CHANGED_FILES; do
             python telegram-data/post_to_telegram.py "$file"
           done
 
