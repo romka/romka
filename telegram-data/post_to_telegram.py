@@ -180,6 +180,7 @@ def build_message(post, url: str, lang: str) -> str:
 
     read_more_text = LANG_TO_TELEGRAM[lang]["read_more_text"]
 
+    preview_raw = re.sub(r"\{\{<[^>]+>\}\}", "", preview_raw) # remove Hugo shortcodes
     preview_raw = re.sub(r"`([^`]+)`", r"<code>\1</code>", preview_raw)
 
     parts = []
