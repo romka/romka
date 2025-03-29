@@ -88,7 +88,8 @@ LANG_TO_TELEGRAM = {
     # }
 }
 
-TELEGRAM_CONTENT_TYPES = os.environ.get("TELEGRAM_CONTENT_TYPES", "content/blog,content/note").split(",")
+TELEGRAM_TEXT_CONTENT_TYPES = os.environ.get("TELEGRAM_CONTENT_TYPES", "content/blog,content/note").split(",")
+TELEGRAM_PHOTO_CONTENT_PATHS = ("content/gallery", "content/story")
 MAPPINGS_PATH = Path("telegram-data/telegram_mappings.csv")
 
 # DON'T CHANGE ANYTHING BELOW THIS LINE
@@ -96,6 +97,7 @@ MAPPINGS_PATH = Path("telegram-data/telegram_mappings.csv")
 TYPE_TEXT = "text"
 TYPE_MEDIA = "media"
 TYPE_PHOTO = "photo"
+TYPE_IMAGE_ONLY = "image_only"
 
 
 def escape_html(text: str) -> str:
@@ -161,7 +163,7 @@ def write_mappings(mappings: dict):
 
 
 def is_allowed_path(path: Path) -> bool:
-    return any(str(path).startswith(t.strip() + "/") for t in TELEGRAM_CONTENT_TYPES)
+    return any(str(path).startswith(t.strip() + "/") for t in TELEGRAM_TEXT_CONTENT_TYPES + list(TELEGRAM_PHOTO_CONTENT_PATHS))
 
 
 def sanitize_telegram_html(html: str) -> str:
@@ -212,6 +214,21 @@ def build_message(post, url: str, lang: str) -> str:
         parts.append(read_more_link)
 
     return "\n\n".join(parts)
+
+
+def extract_image_list_from_gallery(post, path: Path) -> list[str]:
+    if not post.content.strip():
+        return sorted([
+            f.name for f in path.parent.iterdir()
+            if f.suffix.lower() in [".jpg", ".jpeg", ".png"]
+        ])[:10]
+
+    result = []
+    for line in post.content.strip().splitlines():
+        parts = line.strip().split(";")
+        if parts and parts[0]:
+            result.append(parts[0].strip())
+    return result[:10]
 
 
 def send_photo_with_caption(token: str, chat_id: str, image_path: Path, caption: str) -> int:
@@ -371,6 +388,7 @@ def main():
         rel_path = str(path)
 
         if not path.exists() or path.suffix != ".md":
+            print("ℹ️ Path " + str(path) + " does not exist, or doesn't contain md file")
             continue
         if not is_allowed_path(path):
             continue
@@ -391,12 +409,47 @@ def main():
             url_path = f"{lang}/{url_path}"
         url = f"{BASE_URL}/{url_path}/"
 
-        if not post.content:
+        is_photo_content = any(str(path).startswith(p) for p in TELEGRAM_PHOTO_CONTENT_PATHS)
+
+        if not post.content and not is_photo_content:
             print(f"⚠️  Empty content in {rel_path}, skipping")
             continue
 
-        message = build_message(post, url, lang)
+        # --- Process galleries and stories ---
+        if is_photo_content:
+            raw_images = extract_image_list_from_gallery(post, path)
+            image_paths = []
+            for fname in raw_images:
+                full_path = path.parent / fname
+                if not full_path.exists():
+                    print(f"⚠️ Image file not found: {full_path}")
+                    continue
+                if full_path.stat().st_size > 10 * 1024 * 1024:
+                    print(f"⚠️ Image file too large (>10MB), skipping: {full_path.name}")
+                    continue
+                image_paths.append(full_path)
 
+            if not image_paths:
+                print(f"⚠️ No valid images in photo content: {rel_path}")
+                continue
+
+            caption = f"<b>{escape_html(post.get('title', ''))}</b>"
+            if len(raw_images) > 10:
+                caption += f"\n\n<a href=\"{escape_html(url)}\">Читать полностью</a>"
+
+            message_id = send_media_with_caption(config["token"], config["chat_id"], image_paths[:10], caption)
+            mappings[(rel_path, lang)] = {
+                "message_id": message_id,
+                "published_to_telegram_at": now,
+                "updated_at": "",
+                "type": TYPE_MEDIA
+            }
+            updated = True
+            print(f"📸 Sent image gallery: {rel_path}")
+            continue
+
+        # --- Process blog/note (text content) ---
+        message = build_message(post, url, lang)
         key = (rel_path, lang)
 
         if key in mappings:
@@ -441,13 +494,9 @@ def main():
                     print("🖼️ Sent post with one image and caption")
 
                 else:
-                    type = TYPE_PHOTO  # it's not a mistake, it's also a single photo
-                    # Send first photo with the text
+                    type = TYPE_PHOTO
                     message_id = send_photo_with_caption(config["token"], config["chat_id"], image_paths[0], message)
                     print("🖼️ Sent post with first image and caption")
-
-                    # Send the remaining images as a separate mediaGroup. MediaGroups are not editable in Telegram,
-                    # that's why sending is split: to keep opportunity to edit the text
                     try:
                         send_additional_images(config["token"], config["chat_id"], image_paths[1:])
                         print(f"🖼️ Sent additional {len(image_paths) - 1} image(s)")
