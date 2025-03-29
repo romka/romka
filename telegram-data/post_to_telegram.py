@@ -201,12 +201,12 @@ def stylize_bullet_lines(text: str) -> str:
     for line in lines:
         if line.strip().startswith("- "):
             if not in_bullet_block:
-                output.append("<ul>")
+                output.append("")  # blank line before the block
                 in_bullet_block = True
-            output.append(f"<li>{line.strip()[2:].strip()}</li>")
+            output.append("  • " + line.strip()[2:].strip())
         else:
             if in_bullet_block:
-                output.append("</ul>")
+                output.append("")  # blank line after the block
                 in_bullet_block = False
             output.append(line)
     if in_bullet_block:
@@ -457,7 +457,7 @@ def main():
                 print(f"⚠️ No valid images in photo content: {rel_path}")
                 continue
 
-            caption = f"<b>{escape_html(post.get('title', ''))}</b>"
+            caption = f"<b>{escape_html(str(post.get('title', '')))}</b>"
             if len(raw_images) > 10:
                 caption += f"\n\n<a href=\"{escape_html(url)}\">Читать полностью</a>"
 
