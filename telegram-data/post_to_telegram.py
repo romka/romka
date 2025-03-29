@@ -177,6 +177,9 @@ def sanitize_telegram_html(html: str) -> str:
     html = re.sub(r"<p\s*>", "", html)
     html = re.sub(r"<br\s*/?>", "\n", html)
     html = re.sub(r"<hr\s*/?>", "\n\n", html)
+
+    html = html.replace("--", "—")
+
     return html.strip()
 
 
@@ -190,6 +193,27 @@ def cleanup_raw_text(text: str) -> str:
     return text
 
 
+def stylize_bullet_lines(text: str) -> str:
+    lines = text.splitlines()
+    output = []
+    in_bullet_block = False
+
+    for line in lines:
+        if line.strip().startswith("- "):
+            if not in_bullet_block:
+                output.append("")  # blank line before the block
+                in_bullet_block = True
+            output.append("  • " + line.strip()[2:].strip())
+        else:
+            if in_bullet_block:
+                output.append("")  # blank line after the block
+                in_bullet_block = False
+            output.append(line)
+    if in_bullet_block:
+        output.append("")
+    return "\n".join(output)
+
+
 def build_message(post, url: str, lang: str) -> str:
     title_raw = post.get("title", "")
     content_parts = post.content.split("<!--more-->")
@@ -198,7 +222,7 @@ def build_message(post, url: str, lang: str) -> str:
 
     read_more_text = LANG_TO_TELEGRAM[lang]["read_more_text"]
 
-    preview_raw = cleanup_raw_text(preview_raw)
+    preview_raw = stylize_bullet_lines(cleanup_raw_text(preview_raw))
 
     parts = []
 
