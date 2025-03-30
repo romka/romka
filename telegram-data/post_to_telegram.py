@@ -201,12 +201,12 @@ def stylize_bullet_lines(text: str) -> str:
     for line in lines:
         if line.strip().startswith("- "):
             if not in_bullet_block:
-                output.append("")  # blank line before the block
+                output.append("<ul>")
                 in_bullet_block = True
-            output.append("  • " + line.strip()[2:].strip())
+            output.append(f"<li>{line.strip()[2:].strip()}</li>")
         else:
             if in_bullet_block:
-                output.append("")  # blank line after the block
+                output.append("</ul>")
                 in_bullet_block = False
             output.append(line)
     if in_bullet_block:
