@@ -17,7 +17,7 @@ Still, the AI took a wrong turn a few times. For example, when I asked it to mak
 
 Basically, ChatGPT works like a good smart intern: it generates code that looks plausible, but you absolutely have to review it carefully -- there's almost always something broken or awkward in there.
 
-I've tried a few other AI tools in my work, but so far -- surprisingly -- ChatGPT is still the most reasonable one. “Surprisingly,” because ChatGPT is a general-purpose model. I also tested coding-specific models: JetBrains AI Assistant, GitHub Copilot, and Claude 3.7 Sonnet. The first two are unbelievably dumb -- especially considering they have full access to the project's codebase, unlike ChatGPT. As for Claude, I couldn't even get it to work properly: it not only charges for every API call, but also has a built-in rate limiter. Even the simplest request I send ends up hitting a limit error. I guess it tries to ship my entire codebase with each request. I honestly can't think of any other explanation.
+I've tried a few other AI tools in my work, but so far -- surprisingly -- ChatGPT is still the most reasonable one. “Surprisingly”, because ChatGPT is a general-purpose model. I also tested coding-specific models: JetBrains AI Assistant, GitHub Copilot, and Claude 3.7 Sonnet. The first two are unbelievably dumb -- especially considering they have full access to the project's codebase, unlike ChatGPT. As for Claude, I couldn't even get it to work properly: it not only charges for every API call, but also has a built-in rate limiter. Even the simplest request I send ends up hitting a limit error. I guess it tries to ship my entire codebase with each request. I honestly can't think of any other explanation.
 
 Still, all these AI tools are kind of amazing. Ten years ago, we couldn't even dream of assistant-level intelligence like this. I'm almost scared to imagine what they'll evolve into over the next ten years.
-
+<!--more-->
