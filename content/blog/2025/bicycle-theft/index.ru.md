@@ -1,6 +1,7 @@
 ---
 date: 2025-04-15 17:59:00 +0100
 draft: false
+telegram: true
 telegram_images: cover_IMG_0723.jpg
 tags: [полиция, Германия, Берлин, велосипед, кража]
 ---
