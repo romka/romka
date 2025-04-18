@@ -35,10 +35,18 @@ jobs:
           TELEGRAM_BOT_TOKEN_RU: ${{ secrets.TELEGRAM_BOT_TOKEN_RU }}
         run: |
           source venv/bin/activate
+          # Get list of changed Markdown files
           CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$' || true)
-          for file in $CHANGED_FILES; do
-            python telegram-data/post_to_telegram.py "$file"
-          done
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No changed Markdown files to process."
+          else
+            echo "List of processed files:"
+            echo "$CHANGED_FILES"
+            for file in $CHANGED_FILES; do
+              python telegram-data/post_to_telegram.py "$file"
+            done
+          fi
 
       - name: Commit updated telegram_mappings.csv
         run: |
