@@ -1,7 +1,7 @@
 --
 date: 2025-04-18 17:55:01 +0000
 telegram: true
-draft: true
+draft: false
 telegram_images: IMG_1400.jpeg
 tags: [2025, Ирландия]
 --
