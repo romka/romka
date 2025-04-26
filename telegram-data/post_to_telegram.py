@@ -16,8 +16,9 @@ Each post is a Markdown file with [YAML frontmatter](https://jekyllrb.com/docs/f
   - A single image with caption
   - A captioned image followed by a gallery
 - Detects and escapes necessary HTML characters
-- Adds "read more" link if the `<!--more-->` tag is used
-- Tracks sent messages in `telegram_mappings.csv` and updates them if modified
+  - Adds "read more" link if the `<!--more-->` tag is used
+  - Supports `<spoiler>` tags for hidden text in Telegram
+  - Tracks sent messages in `telegram_mappings.csv` and updates them if modified
 
 ---
 
@@ -177,6 +178,8 @@ def sanitize_telegram_html(html: str) -> str:
     html = re.sub(r"<p\s*>", "", html)
     html = re.sub(r"<br\s*/?>", "\n", html)
     html = re.sub(r"<hr\s*/?>", "\n\n", html)
+    html = re.sub(r"<spoiler>", "<tg-spoiler>", html)
+    html = re.sub(r"</spoiler>", "</tg-spoiler>", html)
 
     html = html.replace("--", "—")
 
