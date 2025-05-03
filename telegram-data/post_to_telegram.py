@@ -92,6 +92,7 @@ LANG_TO_TELEGRAM = {
 TELEGRAM_TEXT_CONTENT_TYPES = os.environ.get("TELEGRAM_CONTENT_TYPES", "content/blog,content/note").split(",")
 TELEGRAM_PHOTO_CONTENT_PATHS = ("content/gallery", "content/story")
 MAPPINGS_PATH = Path("telegram-data/telegram_mappings.csv")
+MAX_SIZE = 49 * 1024 * 1024
 
 # DON'T CHANGE ANYTHING BELOW THIS LINE
 # Utils
@@ -245,10 +246,47 @@ def build_message(post, url: str, lang: str) -> str:
 
 def extract_image_list_from_gallery(post, path: Path) -> list[str]:
     if not post.content.strip():
-        return sorted([
-            f.name for f in path.parent.iterdir()
-            if f.suffix.lower() in [".jpg", ".jpeg", ".png"]
-        ])[:10]
+        base_path = path.parent
+        selected_files = []
+        current_size = 0
+        image_limit = 10
+        print(f"ℹ️ Post content empty for {path}. Scanning directory {base_path} for images.")
+        try:
+            # Find potential image files first
+            potential_files = sorted([
+                f for f in base_path.iterdir()
+                if f.is_file() and f.suffix.lower() in [".jpg", ".jpeg", ".png"]
+            ])
+
+            # Iterate and check size/count limits
+            for f in potential_files:
+                if len(selected_files) >= image_limit:
+                    print(f"ℹ️ Reached image limit ({image_limit}) for directory scan of {base_path}")
+                    break
+                try:
+                    file_size = f.stat().st_size
+                    if current_size + file_size <= MAX_SIZE:
+                        selected_files.append(f.name)
+                        current_size += file_size
+                    else:
+                        print(f"ℹ️ Reached max size limit ({MAX_SIZE} bytes) during directory scan. File {f.name} ({file_size} bytes) skipped. Current total size: {current_size} bytes.")
+                        # Continue to check if smaller files might fit
+                except FileNotFoundError:
+                    print(f"⚠️ File not found during size check: {f}")
+                    continue
+                except Exception as e:
+                    print(f"❌ Error getting size for file {f}: {e}")
+                    continue # Skip file if size check fails
+
+            print(f"ℹ️ Selected {len(selected_files)} images from directory scan, total size: {current_size} bytes.")
+            return selected_files
+
+        except FileNotFoundError:
+            print(f"❌ Directory not found: {base_path}")
+            return []
+        except Exception as e:
+            print(f"❌ Error listing or processing files in {base_path}: {e}")
+            return []
 
     result = []
     for line in post.content.strip().splitlines():
