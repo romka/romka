@@ -244,10 +244,15 @@ def build_message(post, url: str, lang: str) -> str:
     return "\n\n".join(parts)
 
 
-def extract_image_list_from_gallery(post, path: Path) -> list[str]:
+def extract_image_list_from_gallery(post, path: Path) -> list[list[str]]:
+    """
+    Extract images from gallery and split them into multiple galleries if total size exceeds MAX_SIZE.
+    Returns a list of lists, where each inner list represents a gallery with images that fit within MAX_SIZE.
+    """
     if not post.content.strip():
         base_path = path.parent
-        selected_files = []
+        galleries = []
+        current_gallery = []
         current_size = 0
         image_limit = 10
         print(f"ℹ️ Post content empty for {path}. Scanning directory {base_path} for images.")
@@ -260,40 +265,105 @@ def extract_image_list_from_gallery(post, path: Path) -> list[str]:
 
             # Iterate and check size/count limits
             for f in potential_files:
-                if len(selected_files) >= image_limit:
-                    print(f"ℹ️ Reached image limit ({image_limit}) for directory scan of {base_path}")
-                    break
                 try:
                     file_size = f.stat().st_size
-                    if current_size + file_size <= MAX_SIZE:
-                        selected_files.append(f.name)
+                    
+                    # If adding this file would exceed MAX_SIZE, start a new gallery
+                    if current_size + file_size > MAX_SIZE:
+                        if current_gallery:  # Only add non-empty galleries
+                            galleries.append(current_gallery)
+                            print(f"ℹ️ Created a gallery with {len(current_gallery)} images, total size: {current_size} bytes.")
+                            current_gallery = []
+                            current_size = 0
+                    
+                    # Add file to current gallery if it fits
+                    if file_size <= MAX_SIZE:  # Skip files larger than MAX_SIZE entirely
+                        current_gallery.append(f.name)
                         current_size += file_size
+                        
+                        # If we've reached the image limit for this gallery, start a new one
+                        if len(current_gallery) >= image_limit:
+                            galleries.append(current_gallery)
+                            print(f"ℹ️ Reached image limit ({image_limit}) for gallery. Created a gallery with {len(current_gallery)} images, total size: {current_size} bytes.")
+                            current_gallery = []
+                            current_size = 0
                     else:
-                        print(f"ℹ️ Reached max size limit ({MAX_SIZE} bytes) during directory scan. File {f.name} ({file_size} bytes) skipped. Current total size: {current_size} bytes.")
-                        # Continue to check if smaller files might fit
+                        print(f"⚠️ File {f.name} ({file_size} bytes) exceeds maximum size limit and will be skipped.")
+                        
                 except FileNotFoundError:
                     print(f"⚠️ File not found during size check: {f}")
                     continue
                 except Exception as e:
                     print(f"❌ Error getting size for file {f}: {e}")
-                    continue # Skip file if size check fails
+                    continue  # Skip file if size check fails
 
-            print(f"ℹ️ Selected {len(selected_files)} images from directory scan, total size: {current_size} bytes.")
-            return selected_files
+            # Add the last gallery if it's not empty
+            if current_gallery:
+                galleries.append(current_gallery)
+                print(f"ℹ️ Created a final gallery with {len(current_gallery)} images, total size: {current_size} bytes.")
+
+            total_images = sum(len(gallery) for gallery in galleries)
+            print(f"ℹ️ Selected {total_images} images across {len(galleries)} galleries from directory scan.")
+            return galleries if galleries else [[]]  # Return at least one empty gallery if none were created
 
         except FileNotFoundError:
             print(f"❌ Directory not found: {base_path}")
-            return []
+            return [[]]
         except Exception as e:
             print(f"❌ Error listing or processing files in {base_path}: {e}")
-            return []
+            return [[]]
 
-    result = []
+    # Process content from post
+    all_images = []
     for line in post.content.strip().splitlines():
         parts = line.strip().split(";")
         if parts and parts[0]:
-            result.append(parts[0].strip())
-    return result[:10]
+            all_images.append(parts[0].strip())
+    
+    # Split images into galleries of max 10 images each
+    galleries = []
+    current_gallery = []
+    current_size = 0
+    
+    for img_name in all_images:
+        img_path = path.parent / img_name
+        try:
+            if not img_path.exists():
+                print(f"⚠️ Image file not found: {img_path}")
+                continue
+                
+            file_size = img_path.stat().st_size
+            
+            # If adding this file would exceed MAX_SIZE, start a new gallery
+            if current_size + file_size > MAX_SIZE and current_gallery:
+                galleries.append(current_gallery)
+                current_gallery = []
+                current_size = 0
+            
+            # Add file to current gallery if it fits
+            if file_size <= MAX_SIZE:  # Skip files larger than MAX_SIZE entirely
+                current_gallery.append(img_name)
+                current_size += file_size
+                
+                # If we've reached the image limit for this gallery, start a new one
+                if len(current_gallery) >= 10:  # Telegram limit is 10 images per media group
+                    galleries.append(current_gallery)
+                    current_gallery = []
+                    current_size = 0
+            else:
+                print(f"⚠️ File {img_name} ({file_size} bytes) exceeds maximum size limit and will be skipped.")
+                
+        except Exception as e:
+            print(f"❌ Error processing image {img_name}: {e}")
+            continue
+    
+    # Add the last gallery if it's not empty
+    if current_gallery:
+        galleries.append(current_gallery)
+    
+    total_images = sum(len(gallery) for gallery in galleries)
+    print(f"ℹ️ Selected {total_images} images across {len(galleries)} galleries from post content.")
+    return galleries if galleries else [[]]  # Return at least one empty gallery if none were created
 
 
 def send_photo_with_caption(token: str, chat_id: str, image_path: Path, caption: str) -> int:
@@ -319,6 +389,7 @@ def send_photo_with_caption(token: str, chat_id: str, image_path: Path, caption:
 
 
 def send_media_with_caption(token: str, chat_id: str, image_paths: list[Path], caption: str) -> int:
+    """Send a media group with caption. Returns the message ID of the first message in the group."""
     url = f"https://api.telegram.org/bot{token}/sendMediaGroup"
     media = []
     files = {}
@@ -482,35 +553,56 @@ def main():
 
         # --- Process galleries and stories ---
         if is_photo_content:
-            raw_images = extract_image_list_from_gallery(post, path)
-            image_paths = []
-            for fname in raw_images:
-                full_path = path.parent / fname
-                if not full_path.exists():
-                    print(f"⚠️ Image file not found: {full_path}")
+            gallery_groups = extract_image_list_from_gallery(post, path)
+            first_message_id = None
+            
+            for gallery_index, gallery in enumerate(gallery_groups):
+                image_paths = []
+                for fname in gallery:
+                    full_path = path.parent / fname
+                    if not full_path.exists():
+                        print(f"⚠️ Image file not found: {full_path}")
+                        continue
+                    if full_path.stat().st_size > 10 * 1024 * 1024:
+                        print(f"⚠️ Image file too large (>10MB), skipping: {full_path.name}")
+                        continue
+                    image_paths.append(full_path)
+
+                if not image_paths:
+                    print(f"⚠️ No valid images in gallery group {gallery_index+1}: {rel_path}")
                     continue
-                if full_path.stat().st_size > 10 * 1024 * 1024:
-                    print(f"⚠️ Image file too large (>10MB), skipping: {full_path.name}")
-                    continue
-                image_paths.append(full_path)
 
-            if not image_paths:
-                print(f"⚠️ No valid images in photo content: {rel_path}")
-                continue
-
-            caption = f"<b>{escape_html(str(post.get('title', '')))}</b>"
-            if len(raw_images) > 10:
-                caption += f"\n\n<a href=\"{escape_html(url)}\">Читать полностью</a>"
-
-            message_id = send_media_with_caption(config["token"], config["chat_id"], image_paths[:10], caption)
-            mappings[(rel_path, lang)] = {
-                "message_id": message_id,
-                "published_to_telegram_at": now,
-                "updated_at": "",
-                "type": TYPE_MEDIA
-            }
-            updated = True
-            print(f"📸 Sent image gallery: {rel_path}")
+                # Only add caption to the first gallery
+                caption = ""
+                if gallery_index == 0:
+                    caption = f"<b>{escape_html(str(post.get('title', '')))}</b>"
+                    total_images = sum(len(g) for g in gallery_groups)
+                    if total_images > 10 or len(gallery_groups) > 1:
+                        caption += f"\n\n<a href=\"{escape_html(url)}\">Читать полностью</a>"
+                
+                try:
+                    message_id = send_media_with_caption(config["token"], config["chat_id"], image_paths, caption)
+                    
+                    # Store the first message ID for mapping
+                    if gallery_index == 0:
+                        first_message_id = message_id
+                        mappings[(rel_path, lang)] = {
+                            "message_id": message_id,
+                            "published_to_telegram_at": now,
+                            "updated_at": "",
+                            "type": TYPE_MEDIA
+                        }
+                    
+                    print(f"📸 Sent image gallery {gallery_index+1}/{len(gallery_groups)}: {rel_path} with {len(image_paths)} images")
+                except Exception as e:
+                    print(f"❌ Failed to send gallery {gallery_index+1}/{len(gallery_groups)}: {e}")
+            
+            if first_message_id:
+                updated = True
+                print(f"📸 Completed sending all galleries for: {rel_path}")
+            else:
+                print(f"⚠️ Failed to send any galleries for: {rel_path}")
+            
             continue
 
         # --- Process blog/note (text content) ---
