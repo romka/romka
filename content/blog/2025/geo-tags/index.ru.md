@@ -1,5 +1,5 @@
 ---
-date: 2025-05-18 17:59:00 +0100
+date: 2025-05-18 17:59:01 +0100
 draft: false
 telegram: true
 tags: [AirTag, Chipolo POP, Pebblebee, геотег, LPWAN, LoRaWAN, rfid, NFC]

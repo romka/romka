@@ -182,6 +182,7 @@ def sanitize_telegram_html(html: str) -> str:
     html = re.sub(r"<spoiler>", "<tg-spoiler>", html)
     html = re.sub(r"</spoiler>", "</tg-spoiler>", html)
 
+    html = html.replace("---", "—")
     html = html.replace("--", "—")
 
     return html.strip()
