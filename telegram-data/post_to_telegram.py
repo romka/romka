@@ -93,6 +93,7 @@ TELEGRAM_TEXT_CONTENT_TYPES = os.environ.get("TELEGRAM_CONTENT_TYPES", "content/
 TELEGRAM_PHOTO_CONTENT_PATHS = ("content/gallery", "content/story")
 MAPPINGS_PATH = Path("telegram-data/telegram_mappings.csv")
 MAX_SIZE = 49 * 1024 * 1024
+MAX_FILE_SIZE = 9.5 * 1024 * 1024
 
 # DON'T CHANGE ANYTHING BELOW THIS LINE
 # Utils
@@ -248,7 +249,7 @@ def build_message(post, url: str, lang: str) -> str:
 def extract_image_list_from_gallery(post, path: Path) -> list[list[str]]:
     """
     Extract images from gallery and split them into multiple galleries if total size exceeds MAX_SIZE.
-    Returns a list of lists, where each inner list represents a gallery with images that fit within MAX_SIZE.
+    Returns a list of lists, where each inner list represents a gallery with images that fit within MAX_FILE_SIZE.
     """
     if not post.content.strip():
         base_path = path.parent
@@ -278,7 +279,7 @@ def extract_image_list_from_gallery(post, path: Path) -> list[list[str]]:
                             current_size = 0
                     
                     # Add file to current gallery if it fits
-                    if file_size <= MAX_SIZE:  # Skip files larger than MAX_SIZE entirely
+                    if file_size <= MAX_FILE_SIZE:  # Skip files larger than MAX_FILE_SIZE entirely
                         current_gallery.append(f.name)
                         current_size += file_size
                         
