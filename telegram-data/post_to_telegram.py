@@ -548,8 +548,9 @@ def main():
         url = f"{BASE_URL}/{url_path}/"
 
         is_photo_content = any(str(path).startswith(p) for p in TELEGRAM_PHOTO_CONTENT_PATHS)
+        has_telegram_images = post.get("telegram_images")
 
-        if not post.content and not is_photo_content:
+        if not post.content and not is_photo_content and not has_telegram_images:
             print(f"⚠️  Empty content in {rel_path}, skipping")
             continue
 
