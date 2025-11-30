@@ -13,10 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo (shallow by date)
+      - name: Checkout repo (metadata only)
         uses: actions/checkout@v4
         with:
-          fetch-depth: 50
+          sparse-checkout: |
+            telegram-data
+            requirements.txt
+          fetch-depth: 2
+          filter: blob:none
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -29,21 +33,42 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
-      - name: Run Telegram post script (only changed Markdown files)
+      - name: Process changes and run Telegram script
         env:
           TELEGRAM_CHAT_ID_RU: ${{ vars.TELEGRAM_CHAT_ID_RU }}
           TELEGRAM_BOT_TOKEN_RU: ${{ secrets.TELEGRAM_BOT_TOKEN_RU }}
         run: |
-          source venv/bin/activate
-          # Get list of changed Markdown files
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$' || true)
+          # Fetch full history for changed path detection relative to previous commit
+          # Note: fetch-depth: 2 in checkout might be enough, but explicitly ensuring we have the diff context
+          
+          # Identify changed markdown files
+          # Using git diff-tree to find files changed in the current commit HEAD
+          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '\.md$' || true)
 
           if [ -z "$CHANGED_FILES" ]; then
             echo "No changed Markdown files to process."
           else
             echo "List of processed files:"
             echo "$CHANGED_FILES"
+            
+            # Activate venv
+            source venv/bin/activate
+
             for file in $CHANGED_FILES; do
+              # We need to ensure the file and its directory (images) are present
+              # 1. Get the directory of the file
+              DIR_PATH=$(dirname "$file")
+              
+              echo "Preparing content for: $file (in $DIR_PATH)"
+              
+              # 2. Add this directory to sparse-checkout and pull the files
+              # We force sparse-checkout to ADD this path to the existing set
+              git sparse-checkout add "$DIR_PATH"
+              
+              # 3. Checkout the files (this downloads them)
+              git checkout ${{ github.sha }} -- "$DIR_PATH"
+
+              # 4. Run the script for this file
               python telegram-data/post_to_telegram.py "$file"
             done
           fi
@@ -52,6 +77,17 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add telegram-data/telegram_mappings.csv
-          git commit -m "Update telegram_mappings.csv after Telegram sync" || echo "No changes to commit"
-          git push
+          
+          # Ensure we have the mappings file (it should be there from initial sparse-checkout)
+          if [ -f "telegram-data/telegram_mappings.csv" ]; then
+             # Check if it has changed
+             if git diff --quiet telegram-data/telegram_mappings.csv; then
+                echo "No changes to mappings file."
+             else
+                git add telegram-data/telegram_mappings.csv
+                git commit -m "Update telegram_mappings.csv after Telegram sync"
+                git push
+             fi
+          else
+             echo "Mappings file not found!"
+          fi

@@ -259,6 +259,54 @@ def extract_image_list_from_gallery(post, path: Path) -> list[list[str]]:
         print(f"ℹ️ Using telegram_images from frontmatter for {path}")
         all_images = [img.strip() for img in str(telegram_images).split(",") if img.strip()]
 
+        # Validate images and split into galleries if needed
+        galleries = []
+        current_gallery = []
+        current_size = 0
+        
+        for img_name in all_images:
+            img_path = path.parent / img_name
+            try:
+                if not img_path.exists():
+                    print(f"⚠️ Image file not found: {img_path}")
+                    continue
+                    
+                file_size = img_path.stat().st_size
+                
+                # Check individual file size limit (10MB)
+                if file_size > MAX_FILE_SIZE:
+                    print(f"⚠️ File {img_name} ({file_size} bytes) exceeds maximum file size limit (9.5MB) and will be skipped.")
+                    continue
+                
+                # If adding this file would exceed MAX_SIZE (50MB), start a new gallery
+                if current_size + file_size > MAX_SIZE and current_gallery:
+                    galleries.append(current_gallery)
+                    print(f"ℹ️ Gallery full ({current_size} bytes). Starting new gallery.")
+                    current_gallery = []
+                    current_size = 0
+                
+                current_gallery.append(img_name)
+                current_size += file_size
+                
+                # If we've reached the image limit for this gallery, start a new one
+                if len(current_gallery) >= 10:
+                    galleries.append(current_gallery)
+                    print(f"ℹ️ Reached image limit (10). Starting new gallery.")
+                    current_gallery = []
+                    current_size = 0
+                    
+            except Exception as e:
+                print(f"❌ Error processing image {img_name}: {e}")
+                continue
+        
+        # Add the last gallery if it's not empty
+        if current_gallery:
+            galleries.append(current_gallery)
+
+        total_images = sum(len(gallery) for gallery in galleries)
+        print(f"ℹ️ Selected {total_images} images across {len(galleries)} galleries from telegram_images.")
+        return galleries if galleries else [[]]
+
     elif not post.content.strip():
         base_path = path.parent
         galleries = []
