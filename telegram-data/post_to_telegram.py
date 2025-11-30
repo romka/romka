@@ -253,7 +253,13 @@ def extract_image_list_from_gallery(post, path: Path) -> list[list[str]]:
     Extract images from gallery and split them into multiple galleries if total size exceeds MAX_SIZE.
     Returns a list of lists, where each inner list represents a gallery with images that fit within MAX_FILE_SIZE.
     """
-    if not post.content.strip():
+    telegram_images = post.get("telegram_images")
+
+    if telegram_images:
+        print(f"ℹ️ Using telegram_images from frontmatter for {path}")
+        all_images = [img.strip() for img in str(telegram_images).split(",") if img.strip()]
+
+    elif not post.content.strip():
         base_path = path.parent
         galleries = []
         current_gallery = []
@@ -317,12 +323,13 @@ def extract_image_list_from_gallery(post, path: Path) -> list[list[str]]:
             print(f"❌ Error listing or processing files in {base_path}: {e}")
             return [[]]
 
-    # Process content from post
-    all_images = []
-    for line in post.content.strip().splitlines():
-        parts = line.strip().split(";")
-        if parts and parts[0]:
-            all_images.append(parts[0].strip())
+    elif not telegram_images:
+        # Process content from post
+        all_images = []
+        for line in post.content.strip().splitlines():
+            parts = line.strip().split(";")
+            if parts and parts[0]:
+                all_images.append(parts[0].strip())
     
     # Split images into galleries of max 10 images each
     galleries = []
@@ -582,7 +589,7 @@ def main():
                 if gallery_index == 0:
                     caption = f"<b>{escape_html(str(post.get('title', '')))}</b>"
                     total_images = sum(len(g) for g in gallery_groups)
-                    if total_images > 10 or len(gallery_groups) > 1:
+                    if total_images > 10 or len(gallery_groups) > 1 or post.get("telegram_images"):
                         caption += f"\n\n<a href=\"{escape_html(url)}\">Читать полностью</a>"
                 
                 try:
