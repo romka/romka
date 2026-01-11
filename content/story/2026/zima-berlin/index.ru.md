@@ -1,0 +1,45 @@
+---
+title: Зимний Берлин
+date: 2026-01-11 12:43:00 +0100
+draft: false
+tags: [Берлин, птицы, зима, лебедь, голубь, чайка, снег, снеговик, 2026]
+summary_photos_count: 11
+---
+000_DSC09627.JPG;Фото сделаны в середине декабря 2025 и начале января 2026
+000_DSC09637.JPG;
+000_DSC09647.JPG;
+000_DSC09659.JPG;
+000_DSC09663.JPG;
+000_DSC09727.JPG;
+000_DSC09731.JPG;
+000_DSC09740.JPG;
+000_DSC09751.JPG;
+000_DSC09770.JPG;
+000_DSC09772.JPG;
+000_DSC09795.JPG;
+000_DSC09808.JPG;
+DSC00004.jpg;
+DSC00009.jpg;
+DSC00019.jpg;
+DSC00033.jpg;
+DSC00034.jpg;
+DSC00035.jpg;
+DSC00042.jpg;
+DSC00055.jpg;
+DSC00056.jpg;
+DSC00062.jpg;
+DSC00066.jpg;
+DSC00067.jpg;
+DSC00068.jpg;
+DSC00077.jpg;
+DSC00084.jpg;
+DSC00099.jpg;
+DSC00101.jpg;
+DSC00104.jpg;
+DSC00109.jpg;
+DSC00116.jpg;
+DSC00120.jpg;
+DSC00136.jpg;
+DSC00144.jpg;
+DSC00152.jpg;
+DSC00161.jpg;
