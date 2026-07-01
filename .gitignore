@@ -5,7 +5,9 @@ resources/
 hugo.log
 romkaeu.iml
 *.sh
+!render-build.sh
 .netlify
+.cache/
 .obsidian
 venv/
 __pycache__/
