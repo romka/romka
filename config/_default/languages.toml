@@ -1,8 +1,10 @@
 [ru]
     title = 'Ромка!eu'
+    locale = 'ru-RU'
     weight = 1
 [en]
     title = 'Romka!eu'
+    locale = 'en-US'
     weight = 2
 
 [[ru.menu.main]]

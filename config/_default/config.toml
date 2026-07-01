@@ -1,11 +1,10 @@
 baseURL = 'https://romka.eu/'
-languageCode = 'en-us'
+locale = 'ru-RU'
 title = 'Romka!eu'
 summaryLength = 25
 copyright = "Roman Arkharov - All rights reserved"
 theme = 'fruhling'
 defaultcontentlanguage = 'ru'
-languagecode = "ru-ru"
 enableRobotsTXT = true
 googleAnalytics = "G-CTT4LY4QD1"
 timeout = "1800s"
