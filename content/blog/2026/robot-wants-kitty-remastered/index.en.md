@@ -1,7 +1,7 @@
 ---
 title: Robot Wants Kitty Is Back in Your Browser
 date: 2026-09-05 16:28:20 +0200
-draft: true
+draft: false
 tags: [game, flash, Robot Wants Kitty, metroidvania, remaster, Defold, work]
 ---
 In the mid-2000s and early 2010s, it was hard to imagine the internet without Flash—a technology that brought video to the web (YouTube would have been impossible without Flash back then!), animated banners, advanced website interfaces and, of course, games. Without Flash, the web of that time was primitive and boring. Flash was a breakthrough technology that was ahead of its time and shaped what the internet would look like for the next 10–20 years. Starting in the early 2010s, the technology gradually began to die: HTML5 started standardizing things such as video and WebAssembly, and everything that had previously required a third-party Flash plugin could now be implemented using standard browser features. Apple's refusal to support Flash on its mobile devices was a serious blow to the technology.
@@ -9,6 +9,8 @@ In the mid-2000s and early 2010s, it was hard to imagine the internet without Fl
 In the end, the era of Flash in general, and Flash games in particular, came to an end in 2017, when Adobe announced that it would stop developing and supporting Flash Player. A whole layer of internet culture from the 2000s and early 2010s was buried along with Flash. The vast majority of games from that time were primitive, unplayable garbage, but every now and then there were gems.
 
 One such gem is the Robot Wants [Kitty|Puppy|Fishy|Ice Cream] series. I was a big fan of these games, so I decided to port them to a modern technology stack so that they could be played directly in a browser. There will be a separate post about the porting process, but right now I want to share that Mike Hommel, creator of the original games, gave me permission to publish remastered versions of his games.
+
+{{<img "robot-wants-kitty-gameplay.png" >}}
 
 The Robot Wants Stuff games are perfectly balanced metroidvanias. Playing as Robot, you need to rescue his pet. But Robot is weak and clumsy by default, so even though the entire world is completely open from the start, reaching its farthest corners and finding the keys that open the way to the pet means making your way through a tangled maze and defeating hordes of enemies.
 
